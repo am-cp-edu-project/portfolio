@@ -10,5 +10,6 @@ app.listen(port, () => {
 })
 
 app.get('/login', (req, res) => {
+    console.log('Sent login page')
     res.sendFile(__dirname + '/build/login.html')
 })
