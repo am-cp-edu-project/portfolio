@@ -2,7 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
 app.use(bodyParser.json())
-app.use(express.static(__dirname + '/build'))
+app.use(express.static(__dirname + '/build/public'))
 
 let port = 88
 app.listen(port, () => {
@@ -10,6 +10,9 @@ app.listen(port, () => {
 })
 
 app.get('/login', (req, res) => {
-    console.log('Sent login page')
+    res.sendFile(__dirname + '/build/login.html')
+})
+
+app.get('*', (req, res) => {
     res.sendFile(__dirname + '/build/login.html')
 })
