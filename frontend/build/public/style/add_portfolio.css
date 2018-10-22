@@ -2,7 +2,11 @@
 font-family: Segoe;
 src: url(9404.ttf);
 }
-P  {
+@font-face {
+    font-family: Segoe_bold;
+    src: url(10391.ttf);
+    }
+p  {
 font-family: Segoe;
 }
 a  {
@@ -114,5 +118,96 @@ ul {
    background-color: #D4E1EC;
 }
 .font_width_desc_selectors{
-   font-weight: 400;
+    
+   font-size: 14px;
+   font-family: Segoe_bold;
 }
+.selectors {
+    margin-top: 20px;
+    width: 40%;
+}
+.area_text{
+    width: 50%;
+    margin-top: 20px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+  }
+  .file-input-label {
+      padding: 0px 10px;
+      display: table-cell;
+      vertical-align: middle;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 30%;
+  }
+  .input-group{
+      margin-top:20px;
+      height: 40px;
+  }
+  input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
+  }
+  .button_send{
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .show_hide_7a_7b{
+      display: block;
+  }
+  .full{
+      width: 100%;
+  }
+  .a8_first_second_crit{
+      display: none;
+  }
+  
+  .selectors-full{
+      margin-top: 20px;
+  }
+  .show_hide_8a{
+      display: none;
+  }
+  #a8_2_crit,  #a8_3_crit,  #a8_4_crit, #b8_4_crit{
+      display: none;
+  }
+  .show_hide_8b{
+    display: none;
+  }
+  .a8_2_crit{
+      display: none;
+  }
+  .a8_1{
+      display: block;
+  }
+  .select_8_2_1{
+      display: none;
+  }
+  .select_8_2_2{
+    display: none;
+  }
+  .select_9a_11_12{
+    display: none;
+  }
+  .select_9a_10{
+    display: none;
+  }
+  .select_9a_9{
+      display: none;
+  }
