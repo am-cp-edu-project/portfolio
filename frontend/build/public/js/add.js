@@ -222,6 +222,33 @@ $(document).on('change', '.btn-file :file', function() {
        
 
     });
+    
+    $(".check_b11").change(function(){
+        if($(this).val() == 0) return false;
+        var check_b11 = $(this).val();
+        if(check_b11 == "Соревнования уровня СПбГУ (при условии наличия систематики участия)") 
+        {  
+            $(".select_b11_1").show();
+            $(".select_b11_2").hide();
+            $(".select_b11_3").hide();
+         }
+         if(check_b11 == "Членство в сборной СПбГУ (при условии наличия систематики участия)") 
+        {  
+            $(".select_b11_1").hide();
+            $(".select_b11_2").show();
+            $(".select_b11_3").hide();
+            
+         }
+         if(check_b11 == "Любое систематическое участие") 
+        {  
+            
+            $(".select_b11_1").hide();
+            $(".select_b11_2").hide();
+            $(".select_b11_3").show();
+         }
+         
+         
+    });
     //    $( ".check_b8" ).change(function() {
     //     if($(this).val() == 0) return false;
     //     var check_b8 = $(this).val();

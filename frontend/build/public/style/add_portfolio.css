@@ -218,6 +218,12 @@ ul {
     display: none;
   }
   
-   .select_9b_4, .select_9b_3 , .select_9b_2{
+   .select_9b_4, .select_9b_3 , .select_9b_2, .show_hide_b11, .show_hide_a11, .show_hide_c11, .show_hide_a10,  .show_hide_b10, .show_hide_c10, .show_hide_b11, .show_hide_a11, show_hide_c11{
       display: none;
   } 
+  .select_b11_3{
+      display: none;
+  }
+  .select_b11_2{
+    display: none;
+}
