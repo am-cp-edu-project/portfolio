@@ -18,7 +18,9 @@ app.get('/crit', (req, res) => {
 app.get('/add', (req, res) => {
     res.sendFile(__dirname + '/build/add.html')
 })
-
+app.get('/404', (req, res) => {
+    res.sendFile(__dirname + '/build/404.html')
+})
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/build/login.html')
 })
