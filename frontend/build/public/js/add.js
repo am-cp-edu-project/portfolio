@@ -45,13 +45,13 @@ $(document).on('change', '.btn-file :file', function() {
         label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
     input.trigger('fileselect', [numFiles, label]);
   });
-  
- 
+
+
       $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
         //   console.log("teste");
           var input_label = $(this).closest('.input-group').find('.file-input-label'),
               log = numFiles > 1 ? numFiles + ' файла выбрано' : label;
-  
+
           if( input_label.length ) {
               input_label.text(log);
           } else {
@@ -62,69 +62,69 @@ $(document).on('change', '.btn-file :file', function() {
         if($(this).val() == 0) return false;
 
         var check_a8 = $(this).val();
-        
-        if(check_a8 == "Награда (приз) за результаты научно-исследовательской работы, проводимой студентом") 
+
+        if(check_a8 == "Награда (приз) за результаты научно-исследовательской работы, проводимой студентом")
         {
-         $("#a8_first_second_crit").show(); 
-         $("#a8_2_crit").hide(); 
-         $("#a8_4_crit").hide(); 
-         
-        }
-        if(check_a8 == "Документ, удостоверяющий исключительное право студента на достигнутый им научный результат") 
-        {
-         $("#a8_first_second_crit").hide(); 
-         $("#a8_2_crit").show(); 
-         $("#a8_4_crit").hide(); 
-        }
-        if(check_a8 == "Собственный грант на выполнение научно-исследовательской работы") 
-        {
-         $("#a8_first_second_crit").hide(); 
-         $("#a8_2_crit").hide(); 
-         $("#a8_4_crit").show(); 
-        }
-        if(check_a8 == "Грант на выполнение научно-исследовательской работы в роли исполнителя") 
-        {
-         $("#a8_first_second_crit").hide(); 
+         $("#a8_first_second_crit").show();
          $("#a8_2_crit").hide();
-         $("#a8_4_crit").show(); 
+         $("#a8_4_crit").hide();
+
+        }
+        if(check_a8 == "Документ, удостоверяющий исключительное право студента на достигнутый им научный результат")
+        {
+         $("#a8_first_second_crit").hide();
+         $("#a8_2_crit").show();
+         $("#a8_4_crit").hide();
+        }
+        if(check_a8 == "Собственный грант на выполнение научно-исследовательской работы")
+        {
+         $("#a8_first_second_crit").hide();
+         $("#a8_2_crit").hide();
+         $("#a8_4_crit").show();
+        }
+        if(check_a8 == "Грант на выполнение научно-исследовательской работы в роли исполнителя")
+        {
+         $("#a8_first_second_crit").hide();
+         $("#a8_2_crit").hide();
+         $("#a8_4_crit").show();
         }
 
        });
        $(".check_b8_1").change(function(){
      if($(this).val() == 0) return false;
        var check_b8_1 = $(this).val();
-        if(check_b8_1 == "Индексируемое Scopus и (или) WoS") 
+        if(check_b8_1 == "Индексируемое Scopus и (или) WoS")
         {
-        $(".b8_1").show(); 
-        
+        $(".b8_1").show();
+
         }
-        if(check_b8_1 == "Включенное в перечень ВАК") 
+        if(check_b8_1 == "Включенное в перечень ВАК")
         {
-         $(".b8_1").hide(); 
-  
-         
-         
+         $(".b8_1").hide();
+
+
+
         }
-        if(check_b8_1 == "Индексируемое РИНЦ") 
+        if(check_b8_1 == "Индексируемое РИНЦ")
         {
-         $(".b8_1").hide(); 
-       
-         
+         $(".b8_1").hide();
+
+
         }
-        if(check_b8_1 == "Не индексируемое") 
+        if(check_b8_1 == "Не индексируемое")
         {
-         $(".b8_1").hide(); 
-            
-         
+         $(".b8_1").hide();
+
+
         }
     });
-    
+
     $(".check_b8_2").change(function(){
         if($(this).val() == 0) return false;
         var check_b8_2 = $(this).val();
-        if(check_b8_2 == "СДнСК") 
+        if(check_b8_2 == "СДнСК")
         {
-            $(".select_8_2_2").show(); 
+            $(".select_8_2_2").show();
         }
         else{
             $(".select_8_2_2").hide();
@@ -133,21 +133,21 @@ $(document).on('change', '.btn-file :file', function() {
     $(".select_8_2").change(function(){
         if($(this).val() == 0) return false;
         var select_8_2 = $(this).val();
-        if(select_8_2 == "ММК") 
+        if(select_8_2 == "ММК")
         {
-            $(".select_8_2_1").show(); 
+            $(".select_8_2_1").show();
             $(".select_8_2_2").show();
         }
         else{
             $(".select_8_2_2").hide();
-            
+
             $(".select_8_2_1").hide();
         }
     });
     $(".check_a9").change(function(){
         if($(this).val() == 0) return false;
         var check_a9 = $(this).val();
-        if(check_a9 == "Членство в жюри предметной олимпиады") 
+        if(check_a9 == "Членство в жюри предметной олимпиады")
         {   $(".select_9a_1_8").hide();
             $(".select_9a_9").show();
             $(".select_9a_10").hide();
@@ -158,15 +158,15 @@ $(document).on('change', '.btn-file :file', function() {
             $(".select_9a_9").hide();
             $(".select_9a_10").show();
             $(".select_9a_11_12").hide();
-            
-       
+
+
         }
         else if(check_a9 == "Проведение (обеспечение проведения) деятельности, направленной на помощь людям"){
             $(".select_9a_1_8").hide();
             $(".select_9a_9").hide();
             $(".select_9a_10").hide();
             $(".select_9a_11_12").show();
-            
+
 
         }
         else if (check_a9 == "Проведение (обеспечение проведения) деятельности природоохранного характера"){
@@ -175,7 +175,7 @@ $(document).on('change', '.btn-file :file', function() {
             $(".select_9a_10").hide();
             $(".select_9a_11_12").show();
         }
-       
+
         else {
             $(".select_9a_1_8").show();
             $(".select_9a_9").hide();
@@ -183,30 +183,30 @@ $(document).on('change', '.btn-file :file', function() {
             $(".select_9a_11_12").hide();
         }
     });
-    
+
     $(".check_9b").change(function(){
         if($(this).val() == 0) return false;
         var check_9b = $(this).val();
-        if(check_9b == "Теле- и (или) радиопрограммы") 
-        {   
+        if(check_9b == "Теле- и (или) радиопрограммы")
+        {
             $(".select_9b_1").show();
             $(".select_9b_2").hide();
             $(".select_9b_3").hide();
             $(".select_9b_4").hide();
         }
-        if(check_9b == "Периодика (печать)") 
+        if(check_9b == "Периодика (печать)")
         {   $(".select_9b_1").hide();
             $(".select_9b_2").show();
             $(".select_9b_3").hide();
             $(".select_9b_4").hide();
         }
-        if(check_9b == "SMM") 
+        if(check_9b == "SMM")
         {   $(".select_9b_1").hide();
             $(".select_9b_2").hide();
             $(".select_9b_3").show();
             $(".select_9b_4").hide();
         }
-        if(check_9b == "Сайт") 
+        if(check_9b == "Сайт")
         {   $(".select_9b_1").hide();
             $(".select_9b_2").hide();
             $(".select_9b_3").hide();
@@ -219,46 +219,46 @@ $(document).on('change', '.btn-file :file', function() {
             $(".select_9b_4").hide();
         }
 
-       
+
 
     });
-    
+
     $(".check_b11").change(function(){
         if($(this).val() == 0) return false;
         var check_b11 = $(this).val();
-        if(check_b11 == "Соревнования уровня СПбГУ (при условии наличия систематики участия)") 
-        {  
+        if(check_b11 == "Соревнования уровня СПбГУ (при условии наличия систематики участия)")
+        {
             $(".select_b11_1").show();
             $(".select_b11_2").hide();
             $(".select_b11_3").hide();
          }
-         if(check_b11 == "Членство в сборной СПбГУ (при условии наличия систематики участия)") 
-        {  
+         if(check_b11 == "Членство в сборной СПбГУ (при условии наличия систематики участия)")
+        {
             $(".select_b11_1").hide();
             $(".select_b11_2").show();
             $(".select_b11_3").hide();
-            
+
          }
-         if(check_b11 == "Любое систематическое участие") 
-        {  
-            
+         if(check_b11 == "Любое систематическое участие")
+        {
+
             $(".select_b11_1").hide();
             $(".select_b11_2").hide();
             $(".select_b11_3").show();
          }
-         
-         
+
+
     });
     //    $( ".check_b8" ).change(function() {
     //     if($(this).val() == 0) return false;
     //     var check_b8 = $(this).val();
-    //     if(check_a8 == "Зарубежное изд") 
+    //     if(check_a8 == "Зарубежное изд")
     //     {
 
 
     //     }
     //    });
-       
+
 $("#check2").change(function(){
     if($(this).val() == 0) return false;
 
@@ -267,7 +267,7 @@ $("#check2").change(function(){
     switch (NameObj) {
         case "a7":
              $("#desc_criterion_first").html(a7.desc);
-              
+
               $(".show_hide_7a_7b").show();
               $(".show_hide_8a").hide();
               $(".show_hide_8b").hide();
@@ -448,7 +448,7 @@ $("#check2").change(function(){
         $(".show_hide_b11").hide();
         $(".show_hide_c11").show();
         break;
-        
+
 }
 
 
@@ -463,4 +463,3 @@ $("#check2").change(function(){
 
 // });
 });
-

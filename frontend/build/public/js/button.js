@@ -84,5 +84,76 @@ function f() {
         res.role = $("#role_9b_4").val();
     }
   }
+
+
+  if ($(".show_hide_a10")[0].style.display != "none") {
+    res.level = $("#level_a10_1").val();
+    res.winner = $("#winner_a10_1").val();
+    res.team = $("#team_a10_1").val();
+  }
+
+
+  if ($(".show_hide_b10")[0].style.display != "none") {
+    res.level = $("#level_b10_1").val();
+    res.team = $("#team_b10_1").val();
+  }
+
+
+  if ($(".show_hide_c10")[0].style.display != "none") {
+    res.level = $("#level_c10_1").val();
+    res.cycle = $("#cycle_c10_1").val();
+    res.role = $("#role_c10_1").val();
+  }
+
+
+  if ($(".show_hide_a11")[0].style.display != "none") {
+    res.level = $("#level_a11_1").val();
+    res.o4no = $("#o4no_a11_1").val();
+    res.team = $("#team_a11_1").val();
+    res.winner = $("#winner_a11_1").val();
+  }
+
+
+  if ($(".show_hide_b11")[0].style.display != "none") {
+    res.part = $("#level_b11_1").val();
+    res.o4no = $("#o4no_b11_1").val();
+    if ($(".select_b11_1")[0].style.display != "none") {
+      res.winner = $("#winner_b11_1").val();
+      res.team = $("#team_b11_1").val();
+    }
+    if ($(".select_b11_2")[0].style.display != "none") {
+      res.role = $("#role_b11_1").val();
+    }
+    if ($(".select_b11_3")[0].style.display != "none") {
+        res.level = $("#level_b11_2").val();
+    }
+  }
+
+  var form = document.forms.namedItem("fileinfo");
+  console.log(form);
+  var oData = new FormData(form);
+  //oData.append('username', 'Борис');
+  var reader = new FileReader();
+
+/*  reader.onload = function(e) {
+    var rawData = reader.result;
+
+  }*/
+
+  //reader.readAsBinaryString(oData.multiple_input_group[0]);
+
+  //console.log(oData.multiple_input_group[0].type);
+
+  var oReq = new XMLHttpRequest();
+  oReq.open("POST", "http://localhost:88/add_file", true);
+  oReq.onload = function(oEvent) {
+    if (oReq.status == 200) {
+      console.log("Uploaded!");
+    } else {
+      console.log("Error " + oReq.status + " occurred when trying to upload your file.");
+    }
+  };
+  oReq.send(oData);
+
   console.log(res);
 }
