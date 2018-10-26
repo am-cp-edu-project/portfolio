@@ -24,3 +24,9 @@ app.get('/404', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/build/login.html')
 })
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/build/user_main.html')
+})
+app.get('/rating', (req, res) => {
+    res.sendFile(__dirname + '/build/rating.html')
+})
