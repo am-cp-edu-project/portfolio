@@ -44,7 +44,6 @@ app.post('/login',(req,res,next)=>{
             if(err){
                 return next(err);
             }
-            console.log("Пытаемся зайти в /home");
             return res.redirect('/home');
         });
     })(req,res,next);
@@ -75,6 +74,10 @@ app.get('/documents', auth , (req,res) => {
 app.get("/logout",(req,res) => {
     req.logout();
     res.redirect('/');
+});
+
+app.get('*', function(req, res){
+    res.sendFile(path + "/404.html");
 });
 
 app.listen(port, ()=> console.log('Example app listening on port ' + port));
