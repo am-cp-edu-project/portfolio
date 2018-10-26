@@ -76,6 +76,11 @@ main{
 ball{
     text-align: right;
 }
+.goto_profile{
+    color: black;
+    /*text-decoration: underline;*/
+    size: 10px;
+}
 .pagination {
     margin-top: 30px;
 }
