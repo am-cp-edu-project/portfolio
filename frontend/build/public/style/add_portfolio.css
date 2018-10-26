@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
 font-family: Segoe;
 src: url(9404.ttf);
 }
@@ -28,27 +28,24 @@ ul {
 .page_top{
     background-color: white;
     border-bottom: 1px solid #a5a5a5;
+}
+
+.logo_img{
+    float: left;
+  	height: 100%;
+  	margin-left: 50px;
+    margin-right: 10px;
+}
+
+.block_header{
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-family: sans-serif;
     color: #4a4a4a;
     font-size: 14px;
 }
-.logo_img{
-    float: left;
-    height: 100%;
-    margin-left: 50px;
-    margin-right: 10px;
-}
-.p_header{
-    margin-top: 8px;
-}
-.block_header{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.exit{
-    text-align: right;
-    margin-top: 25px;
-    margin-right: 40px;
+.main_block{
+   margin-top: 50px;
 }
 /* левый навбар */
 .left_navbar{
@@ -214,3 +211,19 @@ ul {
   .select_9a_9{
       display: none;
   }
+  .show_hide_b9{
+    display: none;
+  }
+  .show_hide_a9{
+    display: none;
+  }
+  
+   .select_9b_4, .select_9b_3 , .select_9b_2, .show_hide_b11, .show_hide_a11, .show_hide_c11, .show_hide_a10,  .show_hide_b10, .show_hide_c10, .show_hide_b11, .show_hide_a11, show_hide_c11{
+      display: none;
+  } 
+  .select_b11_3{
+      display: none;
+  }
+  .select_b11_2{
+    display: none;
+}
