@@ -1,1139 +1,917 @@
-<<<<<<< HEAD
-﻿<!DOCTYPE html>
-=======
 <!DOCTYPE html>
->>>>>>> send_achievments
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Добавить в портфолио</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Добавить в портфолио</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
 
-  <link rel="stylesheet" href="style/add_portfolio.css">
+    <link rel="stylesheet" href="style/add_portfolio.css">
 </head>
 <body>
 <div class="container-fluid">
-  <header>
-<<<<<<< HEAD
+    <header>
         <div class="row page_top">
-            <div class="col-9 block_header">
+            <div class="col-12 block_header">
                 <img src="img/gerb.png" class="logo_img">
                 <p class="p_header">Санкт-Петербургский государственный университет <br>
-                    Добавление в портфолио </p>
+                    Вход в личный кабинет портфолио </p>
             </div>
-            <div class="col-3">
-                <p class="exit"><a href="/logout">Выход из личного кабинета</a></p>
+            <div class="col-3" >
+                <p class="exit"><a href="/logout" >Выход из личного кабинета</a></p>
             </div>
         </div>
+
     </header>
-=======
-          <div class="row page_top">
-              <div class="col-12 block_header">
-                  <img src="img/gerb.png" class="logo_img">
-                  <p class="p_header">Санкт-Петербургский государственный университет <br>
-                      Вход в личный кабинет портфолио </p>
-
-              </div>
-          </div>
-
-      </header>
->>>>>>> send_achievments
 </div>
 <div class="container main_block">
-<div class="row">
-  <div class="col-md-3 leftBlock">
-    <div class="left_navbar">
-      <ul class="ul_nav">
-      		<li class="element">
-<<<<<<< HEAD
-        		<a class="a_element" href="/home">  Мое портфолио</a>
-      		</li>
-          <li class=" element element_active">
-            <a class="" href="/upload">Загрузить в портфолио</a>
-          </li>
-          <li class=" element">
-            <a class="" href="/documents">  Документы</a>
-=======
-        		<a class="a_element" href="#">  Мое портфолио</a>
-      		</li>
-          <li class=" element element_active">
-            <a class="" href="#">Загрузить в портфолио</a>
-          </li>
-          <li class=" element">
-            <a class="" href="#">  Документы</a>
->>>>>>> send_achievments
-          </li>
-        </ul>
-    </div>
-  </div>
-  <div class="col-md-9 rightBlock">
-    <div class="block_main_right">
-      <p  class="headline">
-        Загрузить в портфолио
-      </p>
-      <hr class="hr_blue" >
-      <p class="desc_headline">
-        Добавление достижений для учета в конкурсе на академическую стипендию в повышенном размере
-      </p>
-        <label  for="check1" class="label_direction">Направление:</label>
-        <br />
-          <select id="check1" class="form-control " required>
-            <option>
-              Учеба
-            </option>
-            <option>
-              Наука
-            </option>
-            <option>
-              Общ. деят.
-            </option>
-            <option>
-              Культурно-тв.
-            </option>
-            <option>
-              Спорт
-            </option>
-          </select>
-          <label  for="check2" class="label_direction">Критерий:</label>
-          <br />
-            <select id="check2" class="form-control " required>
-              <option value="a7" selected >
-                7а
-              </option>
-              <option value="b7">
-                7б
-              </option>
-              <option value="c7">
-                7в
-              </option>
-              <option value="a8">
-                8а
-              </option>
-              <option value="b8">
-                8б
-              </option>
-              <option value="a9">
-                9а
-              </option>
-<<<<<<< HEAD
-              <option value="">
-                9б
-              </option>
-              <option>
-                10а
-              </option>
-              <option>
-                10б
-              </option>
-              <option>
-                10в
-              </option>
-              <option>
-                11а
-              </option>
-              <option>
-                11б
-              </option>
-              <option>
-=======
-              <option value="b9">
-                9б
-              </option>
-              <option value="a10">
-                10а
-              </option>
-              <option value="b10">
-                10б
-              </option>
-              <option value="c10">
-                10в
-              </option>
-              <option value="a11">
-                11а
-              </option>
-              <option value="b11">
-                11б
-              </option>
-              <option value="c11">
->>>>>>> send_achievments
-                11в
-              </option>
-            </select>
-  <div class="blue_bg">
-    <p class="desc_selectors" id="desc_criterion_first">
+    <div class="row">
+        <div class="col-md-3 leftBlock">
+            <div class="left_navbar">
+                <ul class="ul_nav">
+                    <li class="element">
+                        <a class="a_element" href="/home">  Мое портфолио</a>
+                    </li>
+                    <li class=" element element_active">
+                        <a class="" href="/upload">Загрузить в портфолио</a>
+                    </li>
+                    <li class=" element">
+                        <a class="" href="/documents">  Документы</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 rightBlock">
+            <div class="block_main_right">
+                <p  class="headline">
+                    Загрузить в портфолио
+                </p>
+                <hr class="hr_blue" >
+                <p class="desc_headline">
+                    Добавление достижений для учета в конкурсе на академическую стипендию в повышенном размере
+                </p>
+                <label  for="check1" class="label_direction">Направление:</label>
+                <br />
+                <select id="check1" class="form-control " required>
+                    <option>
+                        Учеба
+                    </option>
+                    <option>
+                        Наука
+                    </option>
+                    <option>
+                        Общ. деят.
+                    </option>
+                    <option>
+                        Культурно-тв.
+                    </option>
+                    <option>
+                        Спорт
+                    </option>
+                </select>
+                <label  for="check2" class="label_direction">Критерий:</label>
+                <br />
+                <select id="check2" class="form-control " required>
+                    <option value="a7" selected >
+                        7а
+                    </option>
+                    <option value="b7">
+                        7б
+                    </option>
+                    <option value="c7">
+                        7в
+                    </option>
+                    <option value="a8">
+                        8а
+                    </option>
+                    <option value="b8">
+                        8б
+                    </option>
+                    <option value="a9">
+                        9а
+                    </option>
+                    <option value="b9">
+                        9б
+                    </option>
+                    <option value="a10">
+                        10а
+                    </option>
+                    <option value="b10">
+                        10б
+                    </option>
+                    <option value="c10">
+                        10в
+                    </option>
+                    <option value="a11">
+                        11а
+                    </option>
+                    <option value="b11">
+                        11б
+                    </option>
+                    <option value="c11">
+                        11в
+                    </option>
+                </select>
+                <div class="blue_bg">
+                    <p class="desc_selectors" id="desc_criterion_first">
 
-      Получение студентом в течение не менее двух следующих друг за другом промежуточных аттестаций, непосредственно предшествующих назначению повышенной государственной академической стипендии, только оценок «отлично».
+                        Получение студентом в течение не менее двух следующих друг за другом промежуточных аттестаций, непосредственно предшествующих назначению повышенной государственной академической стипендии, только оценок «отлично».
 
-      <br />
+                        <br />
 
-      <span class="font_width_desc_selectors">
+                        <span class="font_width_desc_selectors">
          Примечание:
       </span>  В случае наличия в течение года, непосредственно предшествующего назначению повышенной государственной академической стипендии, пересдачи экзамена (зачета) по неуважительной причине повышенная государственная академическая стипендия за достижение студента, соответствующее настоящему критерию, не назначается в соответствии с абз. 2 п. 7 Порядка, утвержденного Приказом Министерства образования и науки Российской Федерации от 27.12.2016 № 1663.
-      </p>
-
-
-  </div>
-<<<<<<< HEAD
-  <div class="show_hide_7a_7b">
-  <select id="" class="form-control selectors" required>
-=======
-  <div id = "7a_7b" class="show_hide_7a_7b">
-  <select id="level_1" class="form-control selectors" required>
->>>>>>> send_achievments
-    <option >
-      На международном уровне
-    </option>
-    <option >
-      На уровне СНГ
-    </option>
-    <option >
-      На всероссийском уровне
-    </option>
-    <option>
-      На уровне федерального округа
-    </option>
-    <option>
-      На ведомственном уровне
-    </option>
-    <option>
-      На региональном уровне
-    </option>
-    <option>
-      На уровне вуза
-    </option>
-    <option>
-      На уровне структурного подразделения вуза
-    </option>
-    </select>
-<<<<<<< HEAD
-    <select id="" class="form-control selectors" required>
-=======
-    <select id="winner_1" class="form-control selectors" required>
->>>>>>> send_achievments
-      <option>
-        Победитель
-      </option>
-      <option>
-        Призер
-      </option>
-    </select>
-<<<<<<< HEAD
-    <select id="" class="form-control selectors" required>
-=======
-    <select id="team_1" class="form-control selectors" required>
->>>>>>> send_achievments
-      <option>
-        Лично
-      </option>
-      <option>
-        В составе коллектива
-      </option>
-    </select>
-<<<<<<< HEAD
-    <select  class="form-control selectors info_dspo" required>
-=======
-    <select id="dspo_1" class="form-control selectors info_dspo" required>
->>>>>>> send_achievments
-      <option >
-        ДСПО
-      </option>
-      <option>
-        ДнСПО
-      </option>
-    </select>
-    <div class="blue_bg">
-      <p class="desc_selectors desc_criterion_dspo " >
-
-          ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-          <br>
-          ДнСПО - достижения, не соответствующие профилю обучения
-
-
-        </p>
-
-
-    </div>
-<<<<<<< HEAD
-    <select  class="form-control selectors" required>
-=======
-    <select id="o4no_1" class="form-control selectors" required>
->>>>>>> send_achievments
-      <option>
-        Очное участие
-      </option>
-      <option>
-        Заочное участие
-      </option>
-    </select>
-<<<<<<< HEAD
-    <textarea class="form-control area_text"></textarea>
-    <div class="input-group">
-      <span class="input-group-btn">
-        <label class="btn btn-primary btn-file" for="multiple_input_group">
-          <div class="input required"><input id="multiple_input_group" type="file" multiple></div> добавить файлы
-        </label>
-      </span>
-      <span class="file-input-label"></span>
-    </div>
-
-
-
-    </div>
-    <div class="show_hide_8a">
-        <select  class="form-control selectors-full check_a8"  >
-=======
-
-    </div>
-    <div id="8a" class="show_hide_8a">
-        <select id="reward_1"  class="form-control selectors-full check_a8"  >
->>>>>>> send_achievments
-          <option>
-              Награда (приз) за результаты научно-исследовательской работы, проводимой студентом
-          </option>
-          <option>
-              Документ, удостоверяющий исключительное право студента на
-              достигнутый им научный результат
-          </option>
-          <option>
-              Собственный грант на выполнение научно-исследовательской работы
-          </option>
-          <option>
-              Грант на выполнение научно-исследовательской работы в роли исполнителя
-          </option>
-          </select>
-<<<<<<< HEAD
-          <div  id="a8_first_second_crit">
-              <select  class="form-control selectors " required >
-=======
-          <div id = "a8_first_second_crit" class="a8_first_second_crit">
-              <select id="winner_2" class="form-control selectors " required >
->>>>>>> send_achievments
-                  <option>
-                      Победитель
-                  </option>
-                  <option>
-                      Призер
-                  </option>
-                </select>
-<<<<<<< HEAD
-                <select  class="form-control selectors " required >
-=======
-                <select id="team_2" class="form-control selectors " required >
->>>>>>> send_achievments
-                  <option>
-                      Лично
-                  </option>
-                  <option>
-<<<<<<< HEAD
-                      В составе коллектива
-=======
-                        В составе коллектива
->>>>>>> send_achievments
-                  </option>
-                </select>
-
-
-<<<<<<< HEAD
-          <select  class="form-control selectors info_dspo" required>
-              <option >
-=======
-          <select id="dspo_2_1"  class="form-control selectors info_dspo">
-              <option>
->>>>>>> send_achievments
-                ДСПО
-              </option>
-              <option>
-                ДнСПО
-              </option>
-            </select>
-<<<<<<< HEAD
-=======
-
->>>>>>> send_achievments
-            <div class="blue_bg">
-              <p class="desc_selectors desc_criterion_dspo">
-
-                  ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-                  <br>
-                  ДнСПО - достижения, не соответствующие профилю обучения
-
-
-                </p>
-
-
-            </div>
-          </div>
-<<<<<<< HEAD
-          <div  id="a8_2_crit">
-              <select  class="form-control selectors " required >
-                  <option>
-                      Индивидуальный
-                  </option>
-                  <option>
-=======
-          <div  id="a8_2_crit" class="a8_2_crit">
-              <select id="indiv_2"  class="form-control selectors " required >
-                  <option>
-                      Индивидуальный
-                  </option>
-                    <option>
->>>>>>> send_achievments
-                      Коллективный
-                  </option>
-                </select>
-
-
-
-<<<<<<< HEAD
-          <select  class="form-control selectors info_dspo" required>
-=======
-          <select id="dspo_2_2"   class="form-control selectors info_dspo" required>
->>>>>>> send_achievments
-              <option >
-                ДСПО
-              </option>
-              <option>
-                ДнСПО
-              </option>
-            </select>
-            <div class="blue_bg">
-              <p class="desc_selectors desc_criterion_dspo">
-
-                  ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-                  <br>
-                  ДнСПО - достижения, не соответствующие профилю обучения
-
-
-                </p>
-
-
-            </div>
-          </div>
-
-<<<<<<< HEAD
-          <div  id="a8_4_crit">
-
-          <select  class="form-control selectors info_dspo" required>
-=======
-          <div  id="a8_4_crit" class="a8_4_crit">
-
-          <select id="dspo_2_3" class="form-control selectors info_dspo" required>
->>>>>>> send_achievments
-              <option >
-                ДСПО
-              </option>
-              <option>
-                ДнСПО
-              </option>
-            </select>
-            <div class="blue_bg">
-              <p class="desc_selectors desc_criterion_dspo">
-
-                ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-                <br>
-                ДнСПО - достижения, не соответствующие профилю обучения
-
-                </p>
-
-
-            </div>
-          </div>
-
-
-    </div>
-    <div class="show_hide_8b">
-<<<<<<< HEAD
-        <select  class="form-control selectors select_8_2"  >
-=======
-        <select id="izd" class="form-control selectors select_8_2"  >
->>>>>>> send_achievments
-            <option selected >
-                Заруб. изд.
-            </option>
-            <option>
-                ММК
-            </option>
-            <option>
-                Росс. изд
-            </option>
-          </select>
-          <div class="b8">
-<<<<<<< HEAD
-              <select  class="form-control selectors check_b8_1"  >
-=======
-              <select id="index"  class="form-control selectors check_b8_1"  >
->>>>>>> send_achievments
-                  <option>
-                      Индексируемое Scopus и (или) WoS
-                  </option>
-                  <option>
-                      Включенное в перечень ВАК
-                  </option>
-                  <option>
-                      Индексируемое РИНЦ
-                  </option>
-                  <option>
-                      Не индексируемое
-                  </option>
-                </select>
-
-          </div>
-          <div class="b8_1">
-<<<<<<< HEAD
-              <select  class="form-control selectors "  >
-=======
-              <select id="index_type" class="form-control selectors "  >
->>>>>>> send_achievments
-                  <option>
-                      Q1
-                  </option>
-                  <option>
-                      Q2
-                  </option>
-                  <option>
-                      Q2
-                  </option>
-                  <option>
-                      Q3
-                  </option>
-                  <option>
-                      Q4
-                  </option>
-                  <option>
-                      Иное
-                  </option>
-
-               </select>
-
-          </div>
-<<<<<<< HEAD
-       
-    
-        <div class="select_8_2_1">
-          <select  class="form-control selectors check_b8_2 "  >
-=======
-
-
-        <div id="8_2_1" class="select_8_2_1">
-          <select id ="sdnsk"  class="form-control selectors check_b8_2 "  >
->>>>>>> send_achievments
-            <option selected >
-                СДнСК
-            </option>
-            <option>
-                БДнСК
-            </option>
-            </select>
-        </div>
-<<<<<<< HEAD
-        <div class="select_8_2_2">
-            <select  class="form-control selectors check_8_2_2 "  >
-=======
-        <div id="8_2_2" class="select_8_2_2">
-            <select id="ud"  class="form-control selectors check_8_2_2 "  >
->>>>>>> send_achievments
-              <option>
-                  УД
-              </option>
-              <option>
-                  СД
-              </option>
-              </select>
-          </div>
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> send_achievments
-
-
-    </div>
-    <div class="show_hide_a9">
-<<<<<<< HEAD
-        <select  class="form-control selectors-ful check_a9"  >
-            <option selected >
-                Организация научных мероприятий 
-=======
-        <select id="organise" class="form-control selectors-ful check_a9"  >
-            <option selected >
-                Организация научных мероприятий
->>>>>>> send_achievments
-            </option>
-            <option>
-                Организация учебных мероприятий
-            </option>
-            <option>
-<<<<<<< HEAD
-                Организация мероприятий правозащитного характера 
-=======
-                Организация мероприятий правозащитного характера
->>>>>>> send_achievments
-            </option>
-            <option>
-                Организация мероприятий природоохранного характера
-            </option>
-            <option>
-<<<<<<< HEAD
-                Организация мероприятий социального характера 
-=======
-                Организация мероприятий социального характера
->>>>>>> send_achievments
-            </option>
-            <option>
-                Организация иной деятельности культурного и развлекательного характера
-            </option>
-            <option>
-               Организация иных  мероприяти
-            </option>
-            <option>
-                Членство в жюри предметной олимпиады
-            </option>
-            <option>
-<<<<<<< HEAD
-                Безвозмездная педагогическая деятельность 
-=======
-                Безвозмездная педагогическая деятельность
->>>>>>> send_achievments
-            </option>
-            <option>
-                Проведение (обеспечение проведения) деятельности, направленной на помощь людям
-            </option>
-            <option>
-                Проведение (обеспечение проведения) деятельности природоохранного характера
-            </option>
-            <option>
-
-            </option>
-          </select>
-<<<<<<< HEAD
-          <div class="select_9a_1_8">
-          <select  class="form-control selectors-full"  >
-=======
-          <div id="select_9a_1_8" class="select_9a_1_8">
-          <select id="level_a9_1" class="form-control selectors-full"  >
->>>>>>> send_achievments
-            <option>
-                На международном уровне
-            </option>
-            <option>
-                На уровне СНГ
-            </option>
-            <option>
-                На  всероссийском  уровне
-            </option>
-            <option>
-                На уровне  федерального округа
-            </option>
-            <option>
-                На ведомственном уровне
-            </option>
-            <option>
-                На региональном   уровне
-            </option>
-            <option>
-                На уровне вуза
-            </option>
-            <option>
-                На уровне структурного подразделения вуза
-            </option>
-<<<<<<< HEAD
-            
-          </select>
-          <select  class="form-control selectors"  >
-=======
-
-          </select>
-          <select id="cycle_a9_1" class="form-control selectors"  >
->>>>>>> send_achievments
-            <option>
-                Цикл мероприятий
-            </option>
-            <option>
-                Мероприятие
-            </option>
-          </select>
-<<<<<<< HEAD
-          <select  class="form-control selectors"  >
-=======
-          <select id="lead_a9_1" class="form-control selectors"  >
->>>>>>> send_achievments
-              <option>
-                  Руководитель
-              </option>
-              <option>
-                  Главный организатор
-              </option>
-              <option>
-                  Руководитель  направления
-              </option>
-              <option>
-                  Организатор
-              </option>
-              <option>
-                  Волонтер
-              </option>
-              <option>
-                  Участник
-              </option>
-            </select>
-          </div>
-              <div class="select_9a_9">
-<<<<<<< HEAD
-                  <select  class="form-control selectors"  >
-=======
-                  <select id="o4no__a9_1" class="form-control selectors"  >
->>>>>>> send_achievments
-                      <option>
-                          Очный тур
-                      </option>
-                      <option>
-                          Заочный тур
-                      </option>
-                  </select>
-              </div>
-              <div class="select_9a_10">
-<<<<<<< HEAD
-                  <select  class="form-control selectors"  >
-=======
-                  <select id="dspo_a9_1" class="form-control selectors"  >
->>>>>>> send_achievments
-                      <option>
-                          ДСПО
-                      </option>
-                      <option>
-                          ДнСПО
-                      </option>
-                  </select>
-                  <div class="blue_bg">
-                      <p class="desc_selectors desc_criterion_dspo " >
-<<<<<<< HEAD
-                
-                          ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-                          <br>
-                          ДнСПО - достижения, не соответствующие профилю обучения
-                
-                
-                        </p>
-                
-                
-                    </div>
-                  <select  class="form-control selectors"  >
-=======
-
-                          ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
-                          <br>
-                          ДнСПО - достижения, не соответствующие профилю обучения
-
-
-                        </p>
-
-
-                    </div>
-                  <select id="student_a9_1" class="form-control selectors"  >
->>>>>>> send_achievments
-                    <option>
-                        В отношении студентов
-                    </option>
-                    <option>
-                        В отношении школьников
-                    </option>
-                  </select>
-<<<<<<< HEAD
-                  
-
-              </div>
-              <div class="select_9a_11_12">
-                  <select  class="form-control selectors"  >
-=======
-
-
-              </div>
-              <div class="select_9a_11_12">
-                  <select id="lead_a9_2" class="form-control selectors"  >
->>>>>>> send_achievments
-                      <option>
-                          Руководитель органа
-                      </option>
-                      <option>
-                          Активист органа
-                      </option>
-                      <option>
-                          Член органа
-                      </option>
-                  </select>
-              </div>
-    </div>
-<<<<<<< HEAD
-    <input type="button" class="btn btn-primary btn-md button_send" value="отправить">
-    </div>
-=======
-    <div class="show_hide_b9">
-        <select id="tv_b9_1" class="form-control selectors check_9b"  >
-            <option>
-              Теле- и (или) радиопрограммы
-            </option>
-            <option>
-                Периодика (печать)
-            </option>
-            <option>
-                SMM
-            </option>
-            <option>
-                Сайт
-            </option>
-            <option>
-                Секретарь научной конференции
-            </option>
-            </select>
-            <div class="select_9b_1">
-                <select id="role_9b_1"  class="form-control selectors"  >
-                    <option>
-                        Режиссер
-                    </option>
-                    <option>
-                        Редактор
-                    </option>
-                    <option>
-                        Продюсер
-                    </option>
-                    <option>
-                      Ведущий
-                    </option>
-                    <option>
-                      Оператор
-                    </option>
-
-                </select>
-            </div>
-            <div class="select_9b_2">
-                <select id="role_b9_2"  class="form-control selectors"  >
-                    <option>
-                        Главный редактор
-                    </option>
-                    <option>
-                        Бильд-редактор
-                    </option>
-                    <option>
-                        Продюсер
-                    </option>
-                    <option>
-                      Дизайнер-верстальщик
-                    </option>
-                    <option>
-                      Корреспондент
-                    </option>
-                    <option>
-                        Фотограф
-                    </option>
-
-                </select>
-            </div>
-            <div class="select_9b_3">
-                <select id="role_9b_3" class="form-control selectors"  >
-                    <option>
-                        Руководитель
-                    </option>
-                    <option>
-                        Контент-менеджер
-                    </option>
-                    <option>
-                        Администратор
-                    </option>
-
-
-                </select>
-            </div>
-            <div class="select_9b_4">
-                <select id="role_9b_4" class="form-control selectors"  >
-                    <option>
-                        Руководитель
-                    </option>
-                    <option>
-                        Разработчик
-                    </option>
-
-
-
-                </select>
-            </div>
-      </div>
-      <div class="show_hide_a10">
-          <select id="level_a10_1" class="form-control selectors" required>
-              <option >
-                На международном уровне
-              </option>
-              <option >
-                На уровне СНГ
-              </option>
-              <option >
-                На всероссийском уровне
-              </option>
-              <option>
-                На уровне федерального округа
-              </option>
-              <option>
-                На ведомственном уровне
-              </option>
-              <option>
-                На региональном уровне
-              </option>
-              <option>
-                На уровне вуза
-              </option>
-              <option>
-                На уровне структурного подразделения вуза
-              </option>
-              </select>
-              <select id="winner_a10_1" class="form-control selectors" required>
-                <option>
-                  Победитель
-                </option>
-                <option>
-                  Призер
-                </option>
-              </select>
-              <select id="team_a10_1" class="form-control selectors" required>
-                <option>
-                  Лично
-                </option>
-                <option>
-                  В составе коллектива
-                </option>
-              </select>
-      </div>
-      <div class="show_hide_b10">
-          <select id="level_b10_1" class="form-control selectors" required>
-              <option >
-                На международном уровне
-              </option>
-              <option >
-                На уровне СНГ
-              </option>
-              <option >
-                На всероссийском уровне
-              </option>
-              <option>
-                На уровне федерального округа
-              </option>
-              <option>
-                На ведомственном уровне
-              </option>
-              <option>
-                На региональном уровне
-              </option>
-              <option>
-                На уровне вуза
-              </option>
-              <option>
-                На уровне структурного подразделения вуза
-              </option>
-              </select>
-
-              <select id="team_b10_1" class="form-control selectors" required>
-                <option>
-                  Лично
-                </option>
-                <option>
-                  В составе коллектива
-                </option>
-              </select>
-      </div>
-      <div class="show_hide_c10">
-          <select id="level_c10_1" class="form-control selectors-full" required>
-              <option >
-                На международном уровне
-              </option>
-              <option >
-                На уровне СНГ
-              </option>
-              <option >
-                На всероссийском уровне
-              </option>
-              <option>
-                На уровне федерального округа
-              </option>
-              <option>
-                На ведомственном уровне
-              </option>
-              <option>
-                На региональном уровне
-              </option>
-              <option>
-                На уровне вуза
-              </option>
-              <option>
-                На уровне структурного подразделения вуза
-              </option>
-              </select>
-              <select id="cycle_c10_1" class="form-control selectors" required>
-                  <option>
-                      Цикл мероприятий
-                  </option>
-                  <option>
-                      Мероприятие
-                  </option>
-                </select>
-                <select id="role_c10_1" class="form-control selectors"  >
-                    <option>
-                        Руководитель
-                    </option>
-                    <option>
-                        Главный организатор
-                    </option>
-                    <option>
-                        Руководитель  направления
-                    </option>
-                    <option>
-                        Организатор
-                    </option>
-                    <option>
-                        Волонтер
-                    </option>
-                    <option>
-                        Участник
-                    </option>
-                  </select>
-
-
-      </div>
-      <div class="show_hide_a11">
-          <select id="level_a11_1" class="form-control selectors-full" required>
-              <option >
-                На международном уровне
-              </option>
-              <option >
-                На уровне СНГ
-              </option>
-              <option >
-                На всероссийском уровне
-              </option>
-              <option>
-                На уровне федерального округа
-              </option>
-              <option>
-                На ведомственном уровне
-              </option>
-              <option>
-                На региональном уровне
-              </option>
-              <option>
-                На уровне вуза
-              </option>
-              <option>
-                На уровне структурного подразделения вуза
-              </option>
-              </select>
-              <select id="team_a11_1" class="form-control selectors" required>
-                  <option>
-                    Лично
-                  </option>
-                  <option>
-                    В составе коллектива
-                  </option>
-                </select>
-                <select id="o4no_a11_1" class="form-control selectors" required>
-                    <option>
-                      Очное участие
-                    </option>
-                    <option>
-                      Заочное участие
-                    </option>
-                  </select>
-                  <select id="winner_a11_1" class="form-control selectors" required>
-                      <option>
-                        Победитель
-                      </option>
-                      <option>
-                        Призер
-                      </option>
-                    </select>
-
-      </div>
-
-      <div class="show_hide_b11">
-          <select id="level_b11_1" class="form-control selectors-full check_b11" required>
-              <option>
-                  Соревнования уровня СПбГУ (при условии наличия систематики участия)
-              </option>
-              <option>
-                  Членство в сборной СПбГУ (при условии наличия систематики участия)
-              </option>
-              <option>
-                  Любое систематическое участие
-              </option>
-            </select>
-            <select id="o4no_b11_1" class="form-control selectors" required>
-                <option>
-                  Очное участие
-                </option>
-                <option>
-                  Заочное участие
-                </option>
-             </select>
-              <div class="select_b11_1">
-                  <select id="winner_b11_1" class="form-control selectors " required>
-                      <option>
-                          Победитель
-                      </option>
-                      <option>
-                          Призер
-                      </option>
-                    </select>
-                    <select id="team_b11_1" class="form-control selectors " required>
+                    </p>
+
+
+                </div>
+                <div id = "7a_7b" class="show_hide_7a_7b">
+                    <select id="level_1" class="form-control selectors" required>
+                        <option >
+                            На международном уровне
+                        </option>
+                        <option >
+                            На уровне СНГ
+                        </option>
+                        <option >
+                            На всероссийском уровне
+                        </option>
                         <option>
-                            Лично
+                            На уровне федерального округа
+                        </option>
+                        <option>
+                            На ведомственном уровне
+                        </option>
+                        <option>
+                            На региональном уровне
+                        </option>
+                        <option>
+                            На уровне вуза
+                        </option>
+                        <option>
+                            На уровне структурного подразделения вуза
+                        </option>
+                    </select>
+                    <select id="winner_1" class="form-control selectors" required>
+                        <option>
+                            Победитель
                         </option>
                         <option>
                             Призер
                         </option>
-                      </select>
-              </div>
-              <div class="select_b11_2">
-                  <select id="role_b11_1" class="form-control selectors " required>
-                  <option>
-                      Капитан сборной
-                  </option>
-                  <option>
-                      Член сборной
-                  </option>
-                </select>
-              </div>
-              <div class="select_b11_3">
-                  <select id="level_b11_2" class="form-control selectors-full" required>
-                      <option >
-                        На международном уровне
-                      </option>
-                      <option >
-                        На уровне СНГ
-                      </option>
-                      <option >
-                        На всероссийском уровне
-                      </option>
-                      <option>
-                        На уровне федерального округа
-                      </option>
-                      <option>
-                        На ведомственном уровне
-                      </option>
-                      <option>
-                        На региональном уровне
-                      </option>
-                      <option>
-                        На уровне вуза
-                      </option>
-                      <option>
-                        На уровне структурного подразделения вуза
-                      </option>
-                      </select>
-              </div>
-      </div>
-      <div class="show_hide_c11">
-      </div>
-      <textarea class="form-control area_text" placeholder="Введите комментарий"></textarea>
-      <div class="input-group">
+                    </select>
+                    <select id="team_1" class="form-control selectors" required>
+                        <option>
+                            Лично
+                        </option>
+                        <option>
+                            В составе коллектива
+                        </option>
+                    </select>
+                    <select id="dspo_1" class="form-control selectors info_dspo" required>
+                        <option >
+                            ДСПО
+                        </option>
+                        <option>
+                            ДнСПО
+                        </option>
+                    </select>
+                    <div class="blue_bg">
+                        <p class="desc_selectors desc_criterion_dspo " >
+
+                            ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
+                            <br>
+                            ДнСПО - достижения, не соответствующие профилю обучения
+
+
+                        </p>
+
+
+                    </div>
+                    <select id="o4no_1" class="form-control selectors" required>
+                        <option>
+                            Очное участие
+                        </option>
+                        <option>
+                            Заочное участие
+                        </option>
+                    </select>
+
+                </div>
+                <div id="8a" class="show_hide_8a">
+                    <select id="reward_1"  class="form-control selectors-full check_a8"  >
+                        <option>
+                            Награда (приз) за результаты научно-исследовательской работы, проводимой студентом
+                        </option>
+                        <option>
+                            Документ, удостоверяющий исключительное право студента на
+                            достигнутый им научный результат
+                        </option>
+                        <option>
+                            Собственный грант на выполнение научно-исследовательской работы
+                        </option>
+                        <option>
+                            Грант на выполнение научно-исследовательской работы в роли исполнителя
+                        </option>
+                    </select>
+                    <div id = "a8_first_second_crit" class="a8_first_second_crit">
+                        <select id="winner_2" class="form-control selectors " required >
+                            <option>
+                                Победитель
+                            </option>
+                            <option>
+                                Призер
+                            </option>
+                        </select>
+                        <select id="team_2" class="form-control selectors " required >
+                            <option>
+                                Лично
+                            </option>
+                            <option>
+                                В составе коллектива
+                            </option>
+                        </select>
+
+
+                        <select id="dspo_2_1"  class="form-control selectors info_dspo">
+                            <option>
+                                ДСПО
+                            </option>
+                            <option>
+                                ДнСПО
+                            </option>
+                        </select>
+
+                        <div class="blue_bg">
+                            <p class="desc_selectors desc_criterion_dspo">
+
+                                ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
+                                <br>
+                                ДнСПО - достижения, не соответствующие профилю обучения
+
+
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div  id="a8_2_crit" class="a8_2_crit">
+                        <select id="indiv_2"  class="form-control selectors " required >
+                            <option>
+                                Индивидуальный
+                            </option>
+                            <option>
+                                Коллективный
+                            </option>
+                        </select>
+
+
+
+                        <select id="dspo_2_2"   class="form-control selectors info_dspo" required>
+                            <option >
+                                ДСПО
+                            </option>
+                            <option>
+                                ДнСПО
+                            </option>
+                        </select>
+                        <div class="blue_bg">
+                            <p class="desc_selectors desc_criterion_dspo">
+
+                                ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
+                                <br>
+                                ДнСПО - достижения, не соответствующие профилю обучения
+
+
+                            </p>
+
+
+                        </div>
+                    </div>
+
+                    <div  id="a8_4_crit" class="a8_4_crit">
+
+                        <select id="dspo_2_3" class="form-control selectors info_dspo" required>
+                            <option >
+                                ДСПО
+                            </option>
+                            <option>
+                                ДнСПО
+                            </option>
+                        </select>
+                        <div class="blue_bg">
+                            <p class="desc_selectors desc_criterion_dspo">
+
+                                ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
+                                <br>
+                                ДнСПО - достижения, не соответствующие профилю обучения
+
+                            </p>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="show_hide_8b">
+                    <select id="izd" class="form-control selectors select_8_2"  >
+                        <option selected >
+                            Заруб. изд.
+                        </option>
+                        <option>
+                            ММК
+                        </option>
+                        <option>
+                            Росс. изд
+                        </option>
+                    </select>
+                    <div class="b8">
+                        <select id="index"  class="form-control selectors check_b8_1"  >
+                            <option>
+                                Индексируемое Scopus и (или) WoS
+                            </option>
+                            <option>
+                                Включенное в перечень ВАК
+                            </option>
+                            <option>
+                                Индексируемое РИНЦ
+                            </option>
+                            <option>
+                                Не индексируемое
+                            </option>
+                        </select>
+
+                    </div>
+                    <div class="b8_1">
+                        <select id="index_type" class="form-control selectors "  >
+                            <option>
+                                Q1
+                            </option>
+                            <option>
+                                Q2
+                            </option>
+                            <option>
+                                Q2
+                            </option>
+                            <option>
+                                Q3
+                            </option>
+                            <option>
+                                Q4
+                            </option>
+                            <option>
+                                Иное
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div id="8_2_1" class="select_8_2_1">
+                        <select id ="sdnsk"  class="form-control selectors check_b8_2 "  >
+                            <option selected >
+                                СДнСК
+                            </option>
+                            <option>
+                                БДнСК
+                            </option>
+                        </select>
+                    </div>
+                    <div id="8_2_2" class="select_8_2_2">
+                        <select id="ud"  class="form-control selectors check_8_2_2 "  >
+                            <option>
+                                УД
+                            </option>
+                            <option>
+                                СД
+                            </option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+                <div class="show_hide_a9">
+                    <select id="organise" class="form-control selectors-ful check_a9"  >
+                        <option selected >
+                            Организация научных мероприятий
+                        </option>
+                        <option>
+                            Организация учебных мероприятий
+                        </option>
+                        <option>
+                            Организация мероприятий правозащитного характера
+                        </option>
+                        <option>
+                            Организация мероприятий природоохранного характера
+                        </option>
+                        <option>
+                            Организация мероприятий социального характера
+                        </option>
+                        <option>
+                            Организация иной деятельности культурного и развлекательного характера
+                        </option>
+                        <option>
+                            Организация иных  мероприяти
+                        </option>
+                        <option>
+                            Членство в жюри предметной олимпиады
+                        </option>
+                        <option>
+                            Безвозмездная педагогическая деятельность
+                        </option>
+                        <option>
+                            Проведение (обеспечение проведения) деятельности, направленной на помощь людям
+                        </option>
+                        <option>
+                            Проведение (обеспечение проведения) деятельности природоохранного характера
+                        </option>
+                        <option>
+
+                        </option>
+                    </select>
+                    <div id="select_9a_1_8" class="select_9a_1_8">
+                        <select id="level_a9_1" class="form-control selectors-full"  >
+                            <option>
+                                На международном уровне
+                            </option>
+                            <option>
+                                На уровне СНГ
+                            </option>
+                            <option>
+                                На  всероссийском  уровне
+                            </option>
+                            <option>
+                                На уровне  федерального округа
+                            </option>
+                            <option>
+                                На ведомственном уровне
+                            </option>
+                            <option>
+                                На региональном   уровне
+                            </option>
+                            <option>
+                                На уровне вуза
+                            </option>
+                            <option>
+                                На уровне структурного подразделения вуза
+                            </option>
+
+                        </select>
+                        <select id="cycle_a9_1" class="form-control selectors"  >
+                            <option>
+                                Цикл мероприятий
+                            </option>
+                            <option>
+                                Мероприятие
+                            </option>
+                        </select>
+                        <select id="lead_a9_1" class="form-control selectors"  >
+                            <option>
+                                Руководитель
+                            </option>
+                            <option>
+                                Главный организатор
+                            </option>
+                            <option>
+                                Руководитель  направления
+                            </option>
+                            <option>
+                                Организатор
+                            </option>
+                            <option>
+                                Волонтер
+                            </option>
+                            <option>
+                                Участник
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select_9a_9">
+                        <select id="o4no__a9_1" class="form-control selectors"  >
+                            <option>
+                                Очный тур
+                            </option>
+                            <option>
+                                Заочный тур
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select_9a_10">
+                        <select id="dspo_a9_1" class="form-control selectors"  >
+                            <option>
+                                ДСПО
+                            </option>
+                            <option>
+                                ДнСПО
+                            </option>
+                        </select>
+                        <div class="blue_bg">
+                            <p class="desc_selectors desc_criterion_dspo " >
+
+                                ДСПО - достижения, соответствующие профилю обучения (см. общее примечание No 7)
+                                <br>
+                                ДнСПО - достижения, не соответствующие профилю обучения
+
+
+                            </p>
+
+
+                        </div>
+                        <select id="student_a9_1" class="form-control selectors"  >
+                            <option>
+                                В отношении студентов
+                            </option>
+                            <option>
+                                В отношении школьников
+                            </option>
+                        </select>
+
+
+                    </div>
+                    <div class="select_9a_11_12">
+                        <select id="lead_a9_2" class="form-control selectors"  >
+                            <option>
+                                Руководитель органа
+                            </option>
+                            <option>
+                                Активист органа
+                            </option>
+                            <option>
+                                Член органа
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="show_hide_b9">
+                    <select id="tv_b9_1" class="form-control selectors check_9b"  >
+                        <option>
+                            Теле- и (или) радиопрограммы
+                        </option>
+                        <option>
+                            Периодика (печать)
+                        </option>
+                        <option>
+                            SMM
+                        </option>
+                        <option>
+                            Сайт
+                        </option>
+                        <option>
+                            Секретарь научной конференции
+                        </option>
+                    </select>
+                    <div class="select_9b_1">
+                        <select id="role_9b_1"  class="form-control selectors"  >
+                            <option>
+                                Режиссер
+                            </option>
+                            <option>
+                                Редактор
+                            </option>
+                            <option>
+                                Продюсер
+                            </option>
+                            <option>
+                                Ведущий
+                            </option>
+                            <option>
+                                Оператор
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="select_9b_2">
+                        <select id="role_b9_2"  class="form-control selectors"  >
+                            <option>
+                                Главный редактор
+                            </option>
+                            <option>
+                                Бильд-редактор
+                            </option>
+                            <option>
+                                Продюсер
+                            </option>
+                            <option>
+                                Дизайнер-верстальщик
+                            </option>
+                            <option>
+                                Корреспондент
+                            </option>
+                            <option>
+                                Фотограф
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="select_9b_3">
+                        <select id="role_9b_3" class="form-control selectors"  >
+                            <option>
+                                Руководитель
+                            </option>
+                            <option>
+                                Контент-менеджер
+                            </option>
+                            <option>
+                                Администратор
+                            </option>
+
+
+                        </select>
+                    </div>
+                    <div class="select_9b_4">
+                        <select id="role_9b_4" class="form-control selectors"  >
+                            <option>
+                                Руководитель
+                            </option>
+                            <option>
+                                Разработчик
+                            </option>
+
+
+
+                        </select>
+                    </div>
+                </div>
+                <div class="show_hide_a10">
+                    <select id="level_a10_1" class="form-control selectors" required>
+                        <option >
+                            На международном уровне
+                        </option>
+                        <option >
+                            На уровне СНГ
+                        </option>
+                        <option >
+                            На всероссийском уровне
+                        </option>
+                        <option>
+                            На уровне федерального округа
+                        </option>
+                        <option>
+                            На ведомственном уровне
+                        </option>
+                        <option>
+                            На региональном уровне
+                        </option>
+                        <option>
+                            На уровне вуза
+                        </option>
+                        <option>
+                            На уровне структурного подразделения вуза
+                        </option>
+                    </select>
+                    <select id="winner_a10_1" class="form-control selectors" required>
+                        <option>
+                            Победитель
+                        </option>
+                        <option>
+                            Призер
+                        </option>
+                    </select>
+                    <select id="team_a10_1" class="form-control selectors" required>
+                        <option>
+                            Лично
+                        </option>
+                        <option>
+                            В составе коллектива
+                        </option>
+                    </select>
+                </div>
+                <div class="show_hide_b10">
+                    <select id="level_b10_1" class="form-control selectors" required>
+                        <option >
+                            На международном уровне
+                        </option>
+                        <option >
+                            На уровне СНГ
+                        </option>
+                        <option >
+                            На всероссийском уровне
+                        </option>
+                        <option>
+                            На уровне федерального округа
+                        </option>
+                        <option>
+                            На ведомственном уровне
+                        </option>
+                        <option>
+                            На региональном уровне
+                        </option>
+                        <option>
+                            На уровне вуза
+                        </option>
+                        <option>
+                            На уровне структурного подразделения вуза
+                        </option>
+                    </select>
+
+                    <select id="team_b10_1" class="form-control selectors" required>
+                        <option>
+                            Лично
+                        </option>
+                        <option>
+                            В составе коллектива
+                        </option>
+                    </select>
+                </div>
+                <div class="show_hide_c10">
+                    <select id="level_c10_1" class="form-control selectors-full" required>
+                        <option >
+                            На международном уровне
+                        </option>
+                        <option >
+                            На уровне СНГ
+                        </option>
+                        <option >
+                            На всероссийском уровне
+                        </option>
+                        <option>
+                            На уровне федерального округа
+                        </option>
+                        <option>
+                            На ведомственном уровне
+                        </option>
+                        <option>
+                            На региональном уровне
+                        </option>
+                        <option>
+                            На уровне вуза
+                        </option>
+                        <option>
+                            На уровне структурного подразделения вуза
+                        </option>
+                    </select>
+                    <select id="cycle_c10_1" class="form-control selectors" required>
+                        <option>
+                            Цикл мероприятий
+                        </option>
+                        <option>
+                            Мероприятие
+                        </option>
+                    </select>
+                    <select id="role_c10_1" class="form-control selectors"  >
+                        <option>
+                            Руководитель
+                        </option>
+                        <option>
+                            Главный организатор
+                        </option>
+                        <option>
+                            Руководитель  направления
+                        </option>
+                        <option>
+                            Организатор
+                        </option>
+                        <option>
+                            Волонтер
+                        </option>
+                        <option>
+                            Участник
+                        </option>
+                    </select>
+
+
+                </div>
+                <div class="show_hide_a11">
+                    <select id="level_a11_1" class="form-control selectors-full" required>
+                        <option >
+                            На международном уровне
+                        </option>
+                        <option >
+                            На уровне СНГ
+                        </option>
+                        <option >
+                            На всероссийском уровне
+                        </option>
+                        <option>
+                            На уровне федерального округа
+                        </option>
+                        <option>
+                            На ведомственном уровне
+                        </option>
+                        <option>
+                            На региональном уровне
+                        </option>
+                        <option>
+                            На уровне вуза
+                        </option>
+                        <option>
+                            На уровне структурного подразделения вуза
+                        </option>
+                    </select>
+                    <select id="team_a11_1" class="form-control selectors" required>
+                        <option>
+                            Лично
+                        </option>
+                        <option>
+                            В составе коллектива
+                        </option>
+                    </select>
+                    <select id="o4no_a11_1" class="form-control selectors" required>
+                        <option>
+                            Очное участие
+                        </option>
+                        <option>
+                            Заочное участие
+                        </option>
+                    </select>
+                    <select id="winner_a11_1" class="form-control selectors" required>
+                        <option>
+                            Победитель
+                        </option>
+                        <option>
+                            Призер
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="show_hide_b11">
+                    <select id="level_b11_1" class="form-control selectors-full check_b11" required>
+                        <option>
+                            Соревнования уровня СПбГУ (при условии наличия систематики участия)
+                        </option>
+                        <option>
+                            Членство в сборной СПбГУ (при условии наличия систематики участия)
+                        </option>
+                        <option>
+                            Любое систематическое участие
+                        </option>
+                    </select>
+                    <select id="o4no_b11_1" class="form-control selectors" required>
+                        <option>
+                            Очное участие
+                        </option>
+                        <option>
+                            Заочное участие
+                        </option>
+                    </select>
+                    <div class="select_b11_1">
+                        <select id="winner_b11_1" class="form-control selectors " required>
+                            <option>
+                                Победитель
+                            </option>
+                            <option>
+                                Призер
+                            </option>
+                        </select>
+                        <select id="team_b11_1" class="form-control selectors " required>
+                            <option>
+                                Лично
+                            </option>
+                            <option>
+                                Призер
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select_b11_2">
+                        <select id="role_b11_1" class="form-control selectors " required>
+                            <option>
+                                Капитан сборной
+                            </option>
+                            <option>
+                                Член сборной
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select_b11_3">
+                        <select id="level_b11_2" class="form-control selectors-full" required>
+                            <option >
+                                На международном уровне
+                            </option>
+                            <option >
+                                На уровне СНГ
+                            </option>
+                            <option >
+                                На всероссийском уровне
+                            </option>
+                            <option>
+                                На уровне федерального округа
+                            </option>
+                            <option>
+                                На ведомственном уровне
+                            </option>
+                            <option>
+                                На региональном уровне
+                            </option>
+                            <option>
+                                На уровне вуза
+                            </option>
+                            <option>
+                                На уровне структурного подразделения вуза
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="show_hide_c11">
+                </div>
+                <textarea class="form-control area_text" placeholder="Введите комментарий"></textarea>
+                <div class="input-group">
         <span class="input-group-btn">
 <form enctype="multipart/form-data" method="post" name="fileinfo">
           <label class="btn btn-primary btn-file" for="multiple_input_group">
@@ -1145,27 +923,23 @@
           </label>
 </form>
         </span>
-        <span class="file-input-label"></span>
-      </div>
-      <input onclick="f()" type="button" class="btn btn-primary btn-md button_send" value="отправить">
-      </div>
->>>>>>> send_achievments
+                    <span class="file-input-label"></span>
+                </div>
+                <input onclick="f()" type="button" class="btn btn-primary btn-md button_send" value="отправить">
+            </div>
 
 
 
-  </div>
+        </div>
 
-</div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/add.js"></script>
-<<<<<<< HEAD
-=======
 <script src="js/button.js"></script>
 <script src="js/get-form-data.js"></script>
->>>>>>> send_achievments
 </body>
 </html>
