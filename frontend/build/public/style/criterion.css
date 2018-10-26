@@ -1,0 +1,35 @@
+/* .name_doc {
+    color:#;
+    font-size: 16px;
+} */
+    /* text-decoration: underline; */
+
+ /* .document:hover{
+    font-size: 14px;
+    color:#0087D7;;
+} */
+.document{
+    font-size: 16px;
+    color:#727272;
+} 
+.document:hover{
+    font-size: 16px;
+    color:#727272;
+} 
+.desc_selectors{
+    border-radius:5px;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 14px;
+    background-color: #D4E1EC;
+ }
+   .desc_criterion_dspo{
+       color: #727272;
+       font-size: 16px;
+   }
+ .header_info_desc{
+    margin: 1rem 0;
+    font-size: 18px;
+    color: black;
+
+ }
