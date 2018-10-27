@@ -1,11 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const session = require('express-session');
 const fileStore = require('session-file-store')(session);
 const passport = require('passport');
 var path = require('path');
+
+
 path = path.resolve('../frontend') + '/build';
 
 
@@ -56,7 +57,12 @@ app.post('/login',(req,res,next)=>{
             if(err){
                 return next(err);
             }
-            return res.redirect('/home');
+            if(user.username === 'admin') {
+                return res.redirect('/admin');
+            }
+            else {
+                return res.redirect('/home');
+            }
         });
     })(req,res,next);
 });
@@ -68,6 +74,7 @@ const auth = (req,res, next) => {
         return res.redirect('/login')
     }
 };
+
 
 
 app.post('/add_file', upload.array('kek', 12), function (req, res, next) {
@@ -90,10 +97,12 @@ app.get('/documents', auth , (req,res) => {
     res.sendFile(path + "/criterion.html");
 });
 
-app.get("/logout",(req,res) => {
+app.get('/logout',(req,res) => {
     req.logout();
     res.redirect('/');
 });
+
+
 
 app.get('*', function(req, res){
     res.sendFile(path + "/404.html");
