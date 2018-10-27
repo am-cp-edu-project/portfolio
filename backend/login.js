@@ -1,4 +1,7 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const multer  = require('multer');
+const upload = multer({ dest: 'uploads/' });
 const session = require('express-session');
 const fileStore = require('session-file-store')(session);
 const passport = require('passport');
@@ -8,6 +11,15 @@ path = path.resolve('../frontend') + '/build';
 
 const app = express();
 const port = 8080;
+
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({extend: false}));
@@ -53,11 +65,18 @@ const auth = (req,res, next) => {
     if(req.isAuthenticated()){
         next()
     }else{
-        return res.redirect('/')
+        return res.redirect('/login')
     }
 };
 
-app.get("/",(req,res) => res.sendFile(path + "/login.html"));
+
+app.post('/add_file', upload.array('kek', 12), function (req, res, next) {
+    console.log(req.files[0].mimetype);
+});
+
+app.get("/login",(req,res) => res.sendFile(path + "/login.html"));
+
+app.get('/',(req,res) => res.redirect('/home'));
 
 app.get('/home', auth , (req,res) => {
     res.sendFile(path + "/user_main.html");

@@ -145,7 +145,7 @@ function f() {
   //console.log(oData.multiple_input_group[0].type);
 
   var oReq = new XMLHttpRequest();
-  oReq.open("POST", "http://localhost:88/add_file", true);
+  oReq.open("POST", "http://localhost:8080/add_file", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
       console.log("Uploaded!");
