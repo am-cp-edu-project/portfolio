@@ -132,7 +132,7 @@ function f() {
   var form = document.forms.namedItem("fileinfo");
   console.log(form);
   var oData = new FormData(form);
-  //oData.append('username', 'Борис');
+  oData.append('data', JSON.stringify(res));
   var reader = new FileReader();
 
 /*  reader.onload = function(e) {

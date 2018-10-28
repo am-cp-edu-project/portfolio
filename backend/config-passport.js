@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
     FirstName:String,
     Patronymic:String,
     AverageMark:Number,
-    Achivement:[String]
+    Achievement:[String]
 });
 
 
@@ -61,7 +61,7 @@ create_user= function(){
         FirstName:"Серафим",
         Patronymic:"Акакьевич",
         AverageMark: "3.5",
-        Achivement:[]
+        Achievement:[]
     });
 
     newUser.save()
