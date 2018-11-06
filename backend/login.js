@@ -15,7 +15,7 @@ path = path.resolve('../frontend') + '/build'
 
 const app = express()
 const port = 8181
-app.use(morgan('dev'))
+app.use(morgan('combined'))
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
@@ -142,5 +142,3 @@ app.get('*', function(req, res) {
 })
 
 app.listen(port, () => console.log('Example app listening on port ' + port))
-
-//las ttry
