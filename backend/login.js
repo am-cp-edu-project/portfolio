@@ -1,8 +1,8 @@
 const express = require('express')
 const multer = require('multer')
-//const upload = multer({ dest: 'uploads/' });
+// const upload = multer({ dest: 'uploads/' });
 const session = require('express-session')
-const fileStore = require('session-file-store')(session)
+const FileStore = require('session-file-store')(session)
 const passport = require('passport')
 const morgan = require('morgan')
 var path = require('path')
@@ -17,7 +17,7 @@ const app = express()
 const port = 8181
 app.use(morgan('dev'))
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
   res.header(
     'Access-Control-Allow-Headers',
@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
 app.use(
   session({
     secret: 'ОченьОченьСекретноеСлово',
-    store: new fileStore(),
+    store: new FileStore(),
     cookie: {
       path: '/',
       httpOnly: true,
@@ -49,14 +49,14 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.post('/login', (req, res, next) => {
-  passport.authenticate('local', function(err, user) {
+  passport.authenticate('local', function (err, user) {
     if (err) {
       return next(err)
     }
     if (!user) {
       return res.redirect('/')
     }
-    req.logIn(user, function(err) {
+    req.logIn(user, function (err) {
       if (err) {
         return next(err)
       }
@@ -73,22 +73,25 @@ app.post('/login', (req, res, next) => {
 const auth = (req, res, next) => {
   if (req.isAuthenticated() && req.user.role === 'user') {
     next()
-  } else {
+  }
+  else {
     return res.redirect('/login')
   }
 }
 
 const adminAuth = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role == 'admin') {
+  if (req.isAuthenticated() && req.user.role === 'admin') {
     next()
-  } else {
+  }
+  else {
     return res.redirect('/404')
   }
 }
+
 var add = require('./add')
-app.post('/add_achieve', upload.array('files', 12), function(req, res, next) {
+app.post('/add_achieve', upload.array('files', 12), function (req, res, next) {
   var ach = JSON.parse(req.body.data)
-  var arr = new Array()
+  var arr = []
   var i = 0
   console.log(req.user.username)
   while (req.files[i]) {
@@ -137,7 +140,7 @@ app.get('/rating', adminAuth, (req, res) => {
   res.sendFile(path + '/rating.html')
 })
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path + '/404.html')
 })
 
