@@ -1,98 +1,76 @@
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-// var mongoose = require('mongoose');
-//
-// mongoose.connect('mongodb://localhost:27017/admin');
-// const connection = mongoose.connection;
-// connection.on('error', function () {
-//     console.log('Ошибка')
-// });
-// connection.once('open', function () {
-//     console.log('Users - success')
-// });
-//
-// const userSchema = mongoose.Schema({
-//     Login:String,
-//     LastName:String,
-//     FirstName:String,
-//     Patronymic:String,
-//     AverageMark:Number,
-//     Achivement:[String],
-//     role: String
-// });
-//
-//
-// var User = connection.model('User', userSchema);
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/admin');
-const connection = mongoose.connection;
+mongoose.connect('mongodb://localhost:27017/admin', {useNewUrlParser: true})
+const connection = mongoose.connection
 connection.on('error', function () {
-    console.log('Ошибка')
-});
+  console.log('Ошибка')
+})
 connection.once('open', function () {
-    console.log('Users - success')
-});
+  console.log('Users - success')
+})
 
 const userSchema = mongoose.Schema({
-    Login:String,
-    Password: String,
-    Role:String,
-    LastName:String,
-    FirstName:String,
-    Patronymic:String,
-    AverageMark:Number,
-    Achievement:[String]
-});
+  Login: String,
+  Password: String,
+  Role: String,
+  LastName: String,
+  FirstName: String,
+  Patronymic: String,
+  AverageMark: Number,
+  Achievement: [String]
+})
 
 
-var User = connection.model('User', userSchema);
+var User = connection.model('User', userSchema)
 
 
 
 
 passport.serializeUser(function (user, done) {
-    console.log("Сериализация", user );
-    done(null,user._id);
-});
+  console.log('Сериализация', user)
+    done(null, user._id)
+})
 
-passport.deserializeUser(function (id,done) {
-  console.log("Десериализация", id);
-  User.findOne({_id : id},function(err,user){
-    if(err){
-      console.log(err.name);
+passport.deserializeUser(function (id, done) {
+  console.log('Десериализация', id)
+  User.findOne({_id: id}, function (err, user) {
+    if (err) {
+      console.log(err.name)
       return
     }
-    if(!user){
-      console.log("lwdlw");
-      userDB = false;
+    if (!user) {
+      console.log('lwdlw')
+      userDB = false
     }
     else {
-      userDB = user;
+      userDB = user
     }
-  });
-  done(null, userDB);
-});
+  })
+  done(null, userDB)
+})
 
 passport.use(
-    new LocalStrategy(function (username, password, done) {
-      User.findOne({Login : username},function(err,user){
-        if(err){
-          console.log(err.name);
+  new LocalStrategy(function (username, password, done) {
+    User.findOne({Login: username}, function (err, user) {
+      if (err) {
+        console.log(err.name)
           return
+      }
+      if (!user) {
+        console.log('local')
+          return done(null, false)
+      }
+      console.log(user)
+        if (password = user.Password) {
+        userDB = user
+          return (done(null, userDB))
         }
-        if(!user){
-          console.log("local");
-          return done(null,false)
-        }
-        console.log(user);
-        if(password = user.Password){
-          userDB = user;
-          return(done(null,userDB));
-        }
-        return done(null,false);
-      });
+      return done(null, false)
+      })
     })
-);
+)
 
 
 
@@ -117,18 +95,18 @@ passport.use(
 
 };
 */
-module.exports.update = function(ach_id, user_id) {
-  var arr = new Array();
-  User.findOne({_id: user_id}, function(err, user) {
+module.exports.update = function (ach_id, user_id) {
+  var arr = new Array()
+  User.findOne({_id: user_id}, function (err, user) {
     if (err) {
-      console.log(err.name);
+      console.log(err.name)
       return;
     }
-     arr = user.Achievement;
-     User.update({_id:user_id},
-       {Achievement: arr}, function(err){
-         if(err)
-         return console.log(err);
-       } )
-     });
+    arr = user.Achievement
+     User.update({_id: user_id},
+      {Achievement: arr}, function (err) {
+        if (err)
+          {return console.log(err);}
+      })
+  })
 }

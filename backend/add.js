@@ -1,18 +1,21 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/admin');
-const connection = mongoose.connection;
+mongoose.connect(
+  'mongodb://localhost:27017/admin',
+  { useNewUrlParser: true }
+)
+const connection = mongoose.connection
 connection.on('error', function () {
-    console.log('Ошибка')
-});
+  console.log('Ошибка')
+})
 connection.once('open', function () {
-    console.log('Achieve - success')
-});
+  console.log('Achieve - success')
+})
 
 const childSchema = mongoose.Schema({
   type_of_file: String,
   file: Buffer
-});
+})
 const achieveSchema = mongoose.Schema({
   crit: String,
   cycle: String,
@@ -36,20 +39,20 @@ const achieveSchema = mongoose.Schema({
   ud: String,
   winner: String,
   files: [childSchema]
-});
+})
 
+var Achieve = connection.model('Achieve', achieveSchema)
 
-var Achieve = connection.model('Achieve', achieveSchema);
-
-module.exports.create_achieve= function(obj1){
-    var newAchieve = new Achieve(obj1);
-    var id;
-    newAchieve.save()
-        .then(function(doc){
-            id = doc._id;
-        })
-        .catch(function (err){
-            console.log(err);
-        });
-    return id;
-};
+module.exports.create_achieve = function (obj1) {
+  var newAchieve = new Achieve(obj1)
+  var id
+  newAchieve
+    .save()
+    .then(function (doc) {
+      id = doc._id
+    })
+    .catch(function (err) {
+      console.log(err)
+    })
+  return id
+}
