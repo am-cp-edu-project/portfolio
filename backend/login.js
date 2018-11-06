@@ -15,7 +15,7 @@ path = path.resolve('../frontend') + '/build'
 
 const app = express()
 const port = 8181
-app.use(morgan('combined'))
+app.use(morgan('dev'))
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
