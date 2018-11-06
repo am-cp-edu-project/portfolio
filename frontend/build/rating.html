@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Профиль студента</title>
+    <title>Рейтинг студентов</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet", href="style/rating.css">
 </head>
@@ -16,7 +16,7 @@
                     Рейтинг студентов </p>
             </div>
             <div class="col-3">
-                <p class="exit"><a href="">Выход из личного кабинета</a></p>
+                <p class="exit"><a href="/logout">Выход из личного кабинета</a></p>
             </div>
         </div>
     </header>
@@ -25,11 +25,10 @@
             <div class="col-3">
                 <div class="menu">
                     <ul class="options">
-                        <li class="element"><a href="">Новые заявки</a></li>
-                        <li class="element"><a href="#">Обработанные заявки</a></li>
-                        <li class="element_active"><a href="#">Рейтинг студентов</a></li>
-                        <li class="element"><a href="#">Все студенты</a></li>
-                        <li class="element"><a href="#">Информация</a></li>
+                        <li class="element"><a href="/admin">Новые заявки</a></li>
+                        <li class="element"><a href="/processed">Обработанные заявки</a></li>
+                        <li class="element_active"><a href="/rating">Рейтинг студентов</a></li>
+                        <li class="element"><a href="/info">Информация</a></li>
                     </ul>
                 </div>
             </div>

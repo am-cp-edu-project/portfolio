@@ -1,6 +1,28 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
+//
+// mongoose.connect('mongodb://localhost:27017/admin');
+// const connection = mongoose.connection;
+// connection.on('error', function () {
+//     console.log('Ошибка')
+// });
+// connection.once('open', function () {
+//     console.log('Users - success')
+// });
+//
+// const userSchema = mongoose.Schema({
+//     Login:String,
+//     LastName:String,
+//     FirstName:String,
+//     Patronymic:String,
+//     AverageMark:Number,
+//     Achivement:[String],
+//     role: String
+// });
+//
+//
+// var User = connection.model('User', userSchema);
 
 mongoose.connect('mongodb://localhost:27017/admin');
 const connection = mongoose.connection;

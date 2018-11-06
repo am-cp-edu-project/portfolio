@@ -25,25 +25,33 @@ ul {
     margin-left: 0; /* Отступ слева в браузере IE и Opera */
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
    }
+/*Шапка страницы*/
 .page_top{
     background-color: white;
     border-bottom: 1px solid #a5a5a5;
-}
-
-.logo_img{
-    float: left;
-  	height: 100%;
-  	margin-left: 50px;
-    margin-right: 10px;
-}
-
-.block_header{
-    margin-top: 5px;
-    margin-bottom: 5px;
     font-family: sans-serif;
     color: #4a4a4a;
     font-size: 14px;
 }
+.logo_img{
+    float: left;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.p_header{
+    margin-top: 8px;
+}
+.block_header{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.exit{
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 40px;
+}
+/**/
 .main_block{
    margin-top: 50px;
 }
@@ -175,7 +183,7 @@ ul {
       width: 100%;
   }
   .a8_first_second_crit{
-      display: none;
+      display: block;
   }
 
   .selectors-full{
@@ -226,4 +234,21 @@ ul {
   }
   .select_b11_2{
     display: none;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    #check1, #check2{
+        width: 100%;
+    }
+    .selectors {
+        /* margin-top: 20px; */
+        width: 100%;
+    }
+    .area_text{
+        width: 100%;
+    }
+    .button_send{
+        width: 100%;
+    }
+
 }
