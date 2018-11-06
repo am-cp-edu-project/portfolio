@@ -3,3 +3,4 @@ sessions/
 
 *.log
 *.lock
+package-lock.json
