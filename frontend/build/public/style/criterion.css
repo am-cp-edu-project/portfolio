@@ -8,6 +8,33 @@
     font-size: 14px;
     color:#0087D7;;
 } */
+/*Шапка страницы*/
+.page_top{
+    background-color: white;
+    border-bottom: 1px solid #a5a5a5;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    font-size: 14px;
+}
+.logo_img{
+    float: left;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.p_header{
+    margin-top: 8px;
+}
+.block_header{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.exit{
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 40px;
+}
+/**/
 .document{
     font-size: 16px;
     color:#727272;

@@ -20,12 +20,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
-
-app.use(express.json());
-app.use(express.urlencoded({extend: false}));
-app.use(express.static(path + "/public"));
-
 app.use(
     session({
         secret: "ОченьОченьСекретноеСлово",
@@ -39,6 +33,12 @@ app.use(
         saveUninitialized: false
     })
 );
+
+app.use(express.json());
+app.use(express.urlencoded({extend: false}));
+app.use(express.static(path + "/public"));
+
+
 
 require('./config-passport');
 app.use(passport.initialize());
@@ -57,10 +57,10 @@ app.post('/login',(req,res,next)=>{
             if(err){
                 return next(err);
             }
-            if(user.username === 'admin') {
+            if(user.role === 'admin') {
                 return res.redirect('/admin');
             }
-            else {
+            if(user.role === 'user'){
                 return res.redirect('/home');
             }
         });
@@ -68,14 +68,20 @@ app.post('/login',(req,res,next)=>{
 });
 
 const auth = (req,res, next) => {
-    if(req.isAuthenticated()){
+    if(req.isAuthenticated() && req.user.role === 'user'){
         next()
     }else{
         return res.redirect('/login')
     }
 };
 
-
+const adminAuth = (req,res,next) => {
+    if(req.isAuthenticated() && req.user.role == 'admin'){
+        next()
+    }else{
+        return res.redirect('/404')
+    }
+};
 
 app.post('/add_file', upload.array('kek', 12), function (req, res, next) {
     console.log(req.files[0].mimetype);
@@ -89,7 +95,7 @@ app.get('/home', auth , (req,res) => {
     res.sendFile(path + "/user_main.html");
 });
 
-app.get('/upload', auth , (req,res) => {
+app.get('/upload',auth , (req,res) => {
     res.sendFile(path + "/add.html");
 });
 
@@ -102,7 +108,17 @@ app.get('/logout',(req,res) => {
     res.redirect('/');
 });
 
+app.get('/admin',adminAuth, (req,res)=>{
+    res.sendFile(path + "/admin.html");
+});
 
+app.get('/processed',adminAuth, (req,res)=>{
+    res.sendFile(path + '/processed.html');
+});
+
+app.get('/rating',adminAuth, (req,res)=>{
+    res.sendFile(path+'/rating.html');
+});
 
 app.get('*', function(req, res){
     res.sendFile(path + "/404.html");
