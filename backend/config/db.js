@@ -15,3 +15,5 @@ connection.once('open', function () {
 })
 
 module.exports = connection
+
+// haha
