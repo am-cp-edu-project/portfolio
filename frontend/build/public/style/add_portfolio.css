@@ -183,7 +183,7 @@ ul {
       width: 100%;
   }
   .a8_first_second_crit{
-      display: none;
+      display: block;
   }
   
   .selectors-full{
@@ -234,4 +234,21 @@ ul {
   }
   .select_b11_2{
     display: none;
+}
+/* Адаптивность */
+@media (max-width: 768px) { 
+    #check1, #check2{
+        width: 100%;
+     }
+     .selectors {
+        /* margin-top: 20px; */
+        width: 100%;
+    }
+    .area_text{
+        width: 100%;
+    }
+    .button_send{
+        width: 100%;
+    }
+    
 }
