@@ -1,16 +1,5 @@
 var mongoose = require('mongoose')
-
-mongoose.connect(
-  'mongodb://localhost:27017/admin',
-  { useNewUrlParser: true }
-)
-const connection = mongoose.connection
-connection.on('error', function () {
-  console.log('Ошибка')
-})
-connection.once('open', function () {
-  console.log('Achieve - success')
-})
+const connection = require('./config/db')
 
 const childSchema = mongoose.Schema({
   type_of_file: String,

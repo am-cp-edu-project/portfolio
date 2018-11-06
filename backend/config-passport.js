@@ -1,15 +1,7 @@
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const mongoose = require('mongoose')
-
-mongoose.connect('mongodb://localhost:27017/admin', {useNewUrlParser: true})
-const connection = mongoose.connection
-connection.on('error', function () {
-  console.log('Ошибка')
-})
-connection.once('open', function () {
-  console.log('Users - success')
-})
+const connection = require('./config/db')
 
 const userSchema = mongoose.Schema({
   Login: String,
