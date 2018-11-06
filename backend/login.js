@@ -14,7 +14,7 @@ var upload = multer({
 path = path.resolve('../frontend') + '/build'
 
 const app = express()
-const port = 8080
+const port = 8181
 app.use(morgan('dev'))
 
 app.use(function(req, res, next) {
