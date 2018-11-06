@@ -118,7 +118,7 @@ ul {
    background-color: #D4E1EC;
 }
 .font_width_desc_selectors{
-    
+
    font-size: 14px;
    font-family: Segoe_bold;
 }
@@ -177,7 +177,7 @@ ul {
   .a8_first_second_crit{
       display: none;
   }
-  
+
   .selectors-full{
       margin-top: 20px;
   }
@@ -217,10 +217,10 @@ ul {
   .show_hide_a9{
     display: none;
   }
-  
-   .select_9b_4, .select_9b_3 , .select_9b_2, .show_hide_b11, .show_hide_a11, .show_hide_c11, .show_hide_a10,  .show_hide_b10, .show_hide_c10, .show_hide_b11, .show_hide_a11, show_hide_c11{
+
+   .select_9b_4, .select_9b_3 , .select_9b_2, .show_hide_b11, .show_hide_a11, .show_hide_c11, .show_hide_a10,  .show_hide_b10, .show_hide_c10, .show_hide_b11, .show_hide_a11, .show_hide_c11{
       display: none;
-  } 
+  }
   .select_b11_3{
       display: none;
   }

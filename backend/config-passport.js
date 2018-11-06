@@ -13,6 +13,8 @@ connection.once('open', function () {
 
 const userSchema = mongoose.Schema({
     Login:String,
+    Password: String,
+    Role:String,
     LastName:String,
     FirstName:String,
     Patronymic:String,
@@ -23,55 +25,88 @@ const userSchema = mongoose.Schema({
 
 var User = connection.model('User', userSchema);
 
-const userDB = {
-    id : 1,
-    username : 'username',
-    password : 'password'
-};
 
 
 
 passport.serializeUser(function (user, done) {
     console.log("Сериализация", user );
-    done(null,user.id);
+    done(null,user._id);
 });
 
 passport.deserializeUser(function (id,done) {
-    console.log("Десериализация", id);
-    const user = (userDB.id === id) ? userDB : false;
-    done(null, user.id);
+  console.log("Десериализация", id);
+  User.findOne({_id : id},function(err,user){
+    if(err){
+      console.log(err.name);
+      return
+    }
+    if(!user){
+      console.log("lwdlw");
+      userDB = false;
+    }
+    else {
+      userDB = user;
+    }
+  });
+  done(null, userDB);
 });
 
 passport.use(
     new LocalStrategy(function (username, password, done) {
-        if(username === userDB.username && password === userDB.password){
-            create_user();
-            return done(null, userDB)
-        } else{
-            return done(null, false)
+      User.findOne({Login : username},function(err,user){
+        if(err){
+          console.log(err.name);
+          return
         }
+        if(!user){
+          console.log("local");
+          return done(null,false)
+        }
+        console.log(user);
+        if(password = user.Password){
+          userDB = user;
+          return(done(null,userDB));
+        }
+        return done(null,false);
+      });
     })
 );
 
 
-create_user= function(){
-    var newUser = new User({
-        Login: userDB.username,
-        LastName:"Стулов",
-        FirstName:"Серафим",
-        Patronymic:"Акакьевич",
-        AverageMark: "3.5",
-        Achievement:[]
-    });
 
+/*create_user= function(user){
+  var newUser = new User({
+      Login: userDB.username,
+      Role: "user",
+      Password: user.pass,
+      LastName:user.last_name,
+      FirstName:user.first_name,
+      Patronymic:user.patronymic,
+      AverageMark: user.average_mark,
+      Achievement:[]
+  });
     newUser.save()
         .then(function(doc){
             console.log("Сохранен объект", doc);
-            mongoose.disconnect();  // отключение от базы данных
         })
         .catch(function (err){
             console.log(err);
-            mongoose.disconnect();
         });
 
 };
+*/
+module.exports.update = function(ach_id, user_id) {
+  var arr = new Array();
+  User.findOne({_id: user_id}, function(err, user) {
+    if (err) {
+      console.log(err.name);
+      return;
+    }
+     arr = user.Achievement;
+     User.update({_id:user_id},
+       {Achievement: arr}, function(err){
+         if(err)
+         return console.log(err);
+       } )
+     });
+}

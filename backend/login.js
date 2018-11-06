@@ -9,13 +9,13 @@ var storage = multer.memoryStorage();
     var upload = multer({
     storage: storage
 });
-
+const morgan = require('morgan')
 path = path.resolve('../frontend') + '/build';
 
 
 const app = express();
 const port = 8080;
-
+app.use(morgan("dev"));
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -43,7 +43,7 @@ app.use(
     })
 );
 
-require('./config-passport');
+var _user = require('./config-passport');
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -63,9 +63,9 @@ app.post('/login',(req,res,next)=>{
             if(user.username === 'admin') {
                 return res.redirect('/admin');
             }
-            else {
+            else
                 return res.redirect('/home');
-            }
+
         });
     })(req,res,next);
 });
@@ -79,10 +79,11 @@ const auth = (req,res, next) => {
 };
 
 var add = require('./add');
-app.post('/add_file', upload.array('kek', 12), function (req, res, next) {
+app.post('/add_achieve', upload.array('files', 12), function (req, res, next) {
     var ach = JSON.parse(req.body.data);
     var arr = new Array();
     var i = 0;
+    console.log(req.user.username)
     while(req.files[i]) {
       var tmp = {};
       tmp.file = req.files[i].buffer;
@@ -92,7 +93,8 @@ app.post('/add_file', upload.array('kek', 12), function (req, res, next) {
       i = i + 1;
     }
     ach.files = arr;
-    add.create_achieve(ach);
+    var id = add.create_achieve(ach);
+    _user.update(id, req.user._id);
 });
 
 app.get("/login",(req,res) => res.sendFile(path + "/login.html"));

@@ -43,15 +43,13 @@ var Achieve = connection.model('Achieve', achieveSchema);
 
 module.exports.create_achieve= function(obj1){
     var newAchieve = new Achieve(obj1);
-
+    var id;
     newAchieve.save()
         .then(function(doc){
-            console.log("Сохранен объект", doc);
-            mongoose.disconnect();  // отключение от базы данных
+            id = doc._id;
         })
         .catch(function (err){
             console.log(err);
-            mongoose.disconnect();
         });
-
+    return id;
 };
