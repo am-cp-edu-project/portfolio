@@ -2,8 +2,7 @@ const mongoose = require('mongoose')
 const connection = require('../config/db')
 
 const fileSchema = mongoose.Schema({
-  type_of_file: String,
-  file: Buffer
+  filename: String
 })
 
 const achieveSchema = mongoose.Schema({
