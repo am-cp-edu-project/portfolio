@@ -9,6 +9,8 @@ const userSchema = mongoose.Schema({
   FirstName: String,
   Patronymic: String,
   AverageMark: Number,
+  Faculty: String,
+  Course: Number,
   Achievement: [String]
 })
 
