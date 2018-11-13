@@ -14,7 +14,7 @@ exports.createAchieve = function (achieve) {
 };
 
 exports.addAchieveToUser = function (userId, achieveId) {
-  userModel.update({ _id: userId }, { $push: { Achievement: achieveId } })
+  userModel.findOneAndUpdate({ _id: userId }, { $push: { Achievement: achieveId } })
 };
 
 exports.addUser = function (userData) {
