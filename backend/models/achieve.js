@@ -1,11 +1,8 @@
 const mongoose = require('mongoose')
 const connection = require('../config/db')
 
-const fileSchema = mongoose.Schema({
-  filename: String
-})
-
 const achieveSchema = mongoose.Schema({
+  date: String,
   crit: String,
   cycle: String,
   dspo: String,
@@ -27,8 +24,9 @@ const achieveSchema = mongoose.Schema({
   type: String,
   ud: String,
   winner: String,
-  files: [fileSchema]
-});
+  comment: String,
+  files: [String]
+})
 
 const Achieve = connection.model('Achieve', achieveSchema)
 

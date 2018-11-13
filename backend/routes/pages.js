@@ -1,19 +1,19 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
-const frontendPath = path.join(__dirname, '../../frontend', '/build');
-const db = require('../controllers/dbController');
+const express = require('express')
+const router = express.Router()
+const path = require('path')
+const frontendPath = path.join(__dirname, '../../frontend', '/build')
+const db = require('../controllers/dbController')
 
 const auth = (req, res, next) => {
   if (req.isAuthenticated()) {
-    next();
+    next()
   }
   else {
     return res.redirect('/login')
   }
-};
+}
 
-router.get('/', (req, res) => res.redirect('/home'));
+router.get('/', (req, res) => res.redirect('/home'))
 
 router.get('/login', (req, res) => {
   if (req.isAuthenticated()) {
@@ -22,29 +22,27 @@ router.get('/login', (req, res) => {
   else {
     res.sendFile(path.join(frontendPath, 'login.html'))
   }
-});
+})
 
 router.get('/home', auth, (req, res) => {
-  res.sendFile(path.join(frontendPath, '/user_main.html'));
-});
-
-
+  res.sendFile(path.join(frontendPath, '/user_main.html'))
+})
 
 router.get('/upload', auth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/add.html'))
-});
+})
 
 router.get('/documents', auth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/criterion.html'))
-});
+})
 
 router.get('/logout', (req, res) => {
-  req.logout();
+  req.logout()
   res.redirect('/')
-});
+})
 
 router.get('*', function (req, res) {
   res.sendFile(path.join(frontendPath + '/404.html'))
-});
+})
 
-module.exports = router;
+module.exports = router

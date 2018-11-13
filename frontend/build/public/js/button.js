@@ -116,7 +116,7 @@ function f () {
       res.level = $('#level_b11_2').val()
     }
   }
-
+  res.comment = $('#comment').val()
   var form = document.forms.namedItem('fileinfo')
   console.log(form)
   var oData = new FormData(form)
@@ -144,6 +144,5 @@ function f () {
     }
   }
   oReq.send(oData)
-
   console.log(res)
 }
