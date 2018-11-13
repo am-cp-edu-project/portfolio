@@ -94,5 +94,5 @@ module.exports.dynamic = async function (req, res) {
     }
     Achs.push(Achieve)
   }
-  res.send({ LastName: req.user.LastName, FirstName: req.user.FirstName, Patronymic: req.user.Patronymic, Faculty: req.user.Faculty, Course: req.user.Course, AverageMark: req.user.AverageMark, Achs: Achs })
+  res.status(200).send({ LastName: req.user.LastName, FirstName: req.user.FirstName, Patronymic: req.user.Patronymic, Faculty: req.user.Faculty, Course: req.user.Course, AverageMark: req.user.AverageMark, Achs: Achs })
 }

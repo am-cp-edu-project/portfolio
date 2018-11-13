@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 const frontendPath = path.join(__dirname, '../../frontend', '/build')
-const db = require('../controllers/dbController')
 
 const auth = (req, res, next) => {
   if (req.isAuthenticated()) {

@@ -132,7 +132,7 @@ function f () {
   // console.log(oData.multiple_input_group[0].type);
 
   var oReq = new XMLHttpRequest()
-  oReq.open('POST', 'http://localhost:8181/add_achieve', true)
+  oReq.open('POST', '/add_achieve', true)
   oReq.onload = function (oEvent) {
     if (oReq.status == 200) {
       console.log('Uploaded!')
