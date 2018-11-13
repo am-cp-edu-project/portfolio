@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const connection = require('../config/db')
+const mongoose = require('mongoose');
+const connection = require('../config/db');
 
 const userSchema = mongoose.Schema({
   Login: String,
@@ -10,8 +10,8 @@ const userSchema = mongoose.Schema({
   Patronymic: String,
   AverageMark: Number,
   Achievement: [String]
-})
+});
 
-const User = connection.model('User', userSchema)
+const User = connection.model('User', userSchema);
 
-module.exports = User
+module.exports = User;

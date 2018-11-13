@@ -1,8 +1,8 @@
-const path = require('path')
-const passport = require(path.join(__dirname, '../config/passport'))
-const upload = require(path.join(__dirname, '../config/multer'))
-const db = require('./dbController')
-const fs = require('fs')
+const path = require('path');
+const passport = require(path.join(__dirname, '../config/passport'));
+const upload = require(path.join(__dirname, '../config/multer'));
+const db = require('./dbController');
+const fs = require('fs');
 
 module.exports.login = function (req, res, next) {
   passport.authenticate('local', function (err, user) {
@@ -24,7 +24,7 @@ module.exports.login = function (req, res, next) {
       }
     })
   })(req, res, next)
-}
+};
 
 module.exports.addAchieve = function (req, res) {
   if (!fs.existsSync('uploads/')) {
@@ -35,18 +35,30 @@ module.exports.addAchieve = function (req, res) {
       if (err || !req.files) {
         return res.status(400).send('ERROR: Max file size = 15MB')
       }
-      let achieve = JSON.parse(req.body.data)
-      let arr = []
+      let achieve = JSON.parse(req.body.data);
+      let arr = [];
       for (let file in req.files) {
         arr.push(file.filename)
       }
-      achieve.files = arr
-      let createdAchieve = await db.createAchieve(achieve)
-      await db.addAchieveToUser(req.user._id, createdAchieve._id)
+      achieve.files = arr;
+      let createdAchieve = await db.createAchieve(achieve);
+      await db.addAchieveToUser(req.user._id, createdAchieve._id);
       res.sendStatus(200)
     }
     catch (err) {
       res.status(500).send(err)
     }
   })
+};
+
+module.exports.addUser = async function(req, res) {
+  try {
+    console.log(req.body)
+    await db.addUser(req.body)
+    res.sendStatus(200)
+  }
+  catch (err) {
+    console.log(err)
+    res.status(500).send(err)
+  }
 }

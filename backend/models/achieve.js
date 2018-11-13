@@ -28,7 +28,7 @@ const achieveSchema = mongoose.Schema({
   ud: String,
   winner: String,
   files: [fileSchema]
-})
+});
 
 const Achieve = connection.model('Achieve', achieveSchema)
 
