@@ -78,7 +78,8 @@ module.exports.addUser = async function (req, res) {
 
 module.exports.dynamic = async function (req, res) {
   let Achs = []
-  for (let i of req.user.Achievement) {
+  let W = await req.user.Achievement
+  for (let i of W) {
     let Ach = await db.findAchieveById(i)
     let files = Ach.files
     let date = Ach.date

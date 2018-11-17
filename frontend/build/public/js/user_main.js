@@ -7,7 +7,7 @@ $('.category h3').click(function () {
   }
 })
 
-function getUser () {
+function getAcievement () {
   var xhr = new XMLHttpRequest()
 
   xhr.open('GET', '/qwerty', true)
@@ -21,9 +21,7 @@ function getUser () {
     document.getElementsByTagName('ave_ball')[0].innerHTML = data.AverageMark
 
     let qq = ''
-    let k = data.Achs.length
-    console.log(data.Achs)
-    for (let i = 0; i < k; ++i) {
+    for (let i = 0; i < data.Achs.length; ++i) {
       qq += '<div class="name"> <h4>' + data.Achs[i].Date + '</h4> <block_2>'
       for (let j of data.Achs[i].Files) {
         qq += '<p><a target="_blank" rel="noopener noreferrer" href="' + '/uploads/' + j + '" class="goto">Подтверждающий документ</a></p>'
@@ -44,4 +42,4 @@ function getUser () {
   xhr.send()
 };
 
-getUser()
+getAcievement()
