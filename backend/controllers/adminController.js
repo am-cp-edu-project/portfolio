@@ -10,7 +10,7 @@ module.exports.dynamic = async function (req, res) {
       let ach = db.findAchieveById(achievement)
       Achievements.push(ach.comment)
     }
-    info.push({ user: str, achievement: Achievements })
+    info.push({ Id: user._id, user: str, achievement: Achievements })
   }
   res.status(200).send({ Info: info })
 }

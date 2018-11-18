@@ -7,7 +7,7 @@ function getUsers () {
     let data = JSON.parse(xhr.responseText)
     let qq = ''
     for (let i = 0; i < data.Info.length; ++i) {
-      qq += '<div class="name"><h3>' + data.Info[i].user + '</h3><block><p><a href="#" class="goto">Перейти к профилю</a></p>'
+      qq += '<div class="name"><h3>' + data.Info[i].user + '</h3><block><p><a href="/user/'+ data.Info[i].Id+ '" class="goto">Перейти к профилю</a></p>'
       for (let j of data.Info[i].achievement) {
         qq += '<div>Описание: <desc>' + j + '</desc></div>'
       }
