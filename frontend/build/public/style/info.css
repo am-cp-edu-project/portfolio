@@ -1,14 +1,3 @@
-/*.name_doc {*/
-    /*color:#;*/
-    /*font-size: 16px;*/
-/*}*/
-/*text-decoration: underline;*/
-
- /*.document:hover{*/
-   /*font-size: 14px;*/
-   /*color:#0087D7;;*/
-/*}*/
-
 body {
     font-family: "Segoe UI", "Helvetica Neue", "Droid Sans", Arial, Tahoma, Geneva, sans-serif;
     font-size: 16px;
@@ -41,14 +30,12 @@ body {
     margin-right: 40px;
 }
 /**/
-.main_block{
-    margin-top: 50px;
-}
 /*Навигация*/
 
 .menu {
     width: 70%;
     background-color: white;
+    margin: 50px;
     padding: 10px;
 }
 .element_active a {
@@ -71,7 +58,8 @@ body {
     padding: 0;
 }
 /**/
-.rightBlock{
+.rightBlock {
+    margin-top: 50px;
     background-color: white;
 }
 .hr_blue{
