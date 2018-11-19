@@ -6,11 +6,13 @@ module.exports.dynamic = async function (req, res) {
   for (let user of Users) {
     let str = user.FirstName + ' ' + user.LastName + ' ' + user.Patronymic
     let Achievements = []
+    let Comments = []
     for (let achievement of user.Achievement) {
-      let ach = db.findAchieveById(achievement)
-      Achievements.push(ach.comment)
+      let ach = await db.findAchieveById(achievement)
+      Achievements.push(ach.type)
+      Comments.push(ach.comment)
     }
-    info.push({ Id: user._id, user: str, achievement: Achievements })
+    info.push({ Id: user._id, user: str, Comments: Comments, Achievements: Achievements })
   }
   res.status(200).send({ Info: info })
 }
