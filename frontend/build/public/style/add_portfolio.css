@@ -250,5 +250,29 @@ ul {
     .button_send{
         width: 100%;
     }
-
+  .logo_img{
+        min-width: 15%;
+        max-width: 50%;
+        height: auto;
+        margin-left: 0;
+    }
+    .p_header {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+        }
+    .exit{
+    text-align: left;
+    margin-top: 10px;
+    margin-right: 0px;
+    }
+    .left_navbar{
+        width: 100%;
+    }
+    .ul_nav{
+        padding-bottom: 1rem;
+    }
+    .page_top{
+        padding-bottom: 0;
+    }
 }
+

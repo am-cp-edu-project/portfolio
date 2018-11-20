@@ -28,3 +28,17 @@ exports.addUser = function (userData) {
 exports.findAchieveById = function (id) {
   return AchieveModel.findById(id)
 }
+
+exports.ChangeAchieve = function (id, isGood) {
+  if (isGood === true) {
+    console.log('Бабушка помоги')
+    return AchieveModel.findOneAndUpdate({ _id: id }, { $set: { status: 'Принято' } }, function (err, result) {
+      console.log('')
+    })
+  }
+  else {
+    return AchieveModel.findOneAndUpdate({ _id: id }, { $set: { status: 'Отказано' } }, function (err, result) {
+      console.log('')
+    })
+  }
+}
