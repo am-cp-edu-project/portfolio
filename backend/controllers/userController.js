@@ -78,7 +78,6 @@ module.exports.addUser = async function (req, res) {
 
 module.exports.dynamic = async function (req, res) {
   let Achs = []
-  console.log(1)
   let W = await req.user.Achievement
   for (let i of W) {
     let Ach = await db.findAchieveById(i)

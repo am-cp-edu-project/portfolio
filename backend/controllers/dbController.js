@@ -1,6 +1,10 @@
 const UserModel = require('../models/user.js')
 const AchieveModel = require('../models/achieve')
 
+exports.allUsers = function () {
+  return UserModel.find({ Role: 'User' })
+}
+
 exports.findUserById = function (id) {
   return UserModel.findById(id)
 }
@@ -10,7 +14,6 @@ exports.findUserByName = function (username) {
 }
 
 exports.createAchieve = function (achieve) {
-  console.log(achieve)
   return AchieveModel.create(achieve)
 }
 

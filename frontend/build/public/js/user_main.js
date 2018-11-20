@@ -33,7 +33,7 @@ function get_desc (obj) {
   return res
 }
 
-function getUser () {
+function getAcievement () {
   var xhr = new XMLHttpRequest()
 
   xhr.open('GET', '/qwerty', true)
@@ -91,4 +91,4 @@ function getUser () {
   xhr.send()
 };
 
-getUser()
+getAcievement()

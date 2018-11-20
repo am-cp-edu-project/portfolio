@@ -41,7 +41,7 @@ main{
 }
 .element a{
     background-color: white;
-    color: rgb(115,115,115);
+    color: black;
     padding: 10px;
     display: block;
     width: 100%;
