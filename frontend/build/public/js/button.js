@@ -117,25 +117,19 @@ function f () {
     }
   }
   res.comment = $('#comment').val()
+  res.status = 'Ожидает проверки'
   var form = document.forms.namedItem('fileinfo')
   console.log(form)
   var oData = new FormData(form)
   oData.append('data', JSON.stringify(res))
-  var reader = new FileReader()
-
-  /*  reader.onload = function(e) {
-        var rawData = reader.result;
-      } */
-
-  // reader.readAsBinaryString(oData.multiple_input_group[0]);
-
-  // console.log(oData.multiple_input_group[0].type);
-
   var oReq = new XMLHttpRequest()
   oReq.open('POST', '/add_achieve', true)
   oReq.onload = function (oEvent) {
-    if (oReq.status == 200) {
+    if (oReq.status === 200) {
       console.log('Uploaded!')
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })
     }
     else {
       console.log(
