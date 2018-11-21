@@ -62,7 +62,7 @@ ul {
 }
 .element {
   font-size: 1.1rem;
-  padding: 0.3rem 0.3rem 0.5rem 0;
+  padding: 0.3rem;
 }
 .element_active {
   color: white;
@@ -71,7 +71,6 @@ ul {
 
 .element a {
   color: #737373;
-  padding-left: 5%;
 }
 .element a:hover {
   text-decoration: none;
