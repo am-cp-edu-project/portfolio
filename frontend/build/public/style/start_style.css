@@ -19,6 +19,13 @@ html {
   min-height: 60px;
   align-self: center;
 }
+
+@media (max-width: 768px) {
+  .logo_img {
+    margin-left: 0;
+  }
+}
+
 .block_header {
   margin-top: 5px;
   margin-bottom: 5px;
