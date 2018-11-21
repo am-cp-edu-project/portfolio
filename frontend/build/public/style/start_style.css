@@ -25,7 +25,7 @@ html {
     color: #4a4a4a;
     display: flex;
     font-size: 14px;
-    /* align-items: center; */
+    align-items: center;
     /* justify-content: flex-start; */
 }
 .p_header{
