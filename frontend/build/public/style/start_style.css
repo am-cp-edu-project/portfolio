@@ -21,12 +21,11 @@ html {
 .block_header{
     margin-top: 5px;
     margin-bottom: 5px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     color: #4a4a4a;
     display: flex;
     font-size: 14px;
     align-items: center;
-    /* justify-content: flex-start; */
 }
 .p_header{
     /* margin-top: 8px; */
