@@ -7,6 +7,7 @@ const fs = require('fs')
 const uploadsPath = path.join(__dirname, '../../frontend/build/public/uploads')
 
 module.exports.login = function (req, res, next) {
+  console.log(55555)
   passport.authenticate('local', function (err, user) {
     console.log(user)
     console.log(1111)
