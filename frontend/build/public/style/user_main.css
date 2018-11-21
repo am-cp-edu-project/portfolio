@@ -51,8 +51,8 @@ ul {
 }
 .exit {
   text-align: right;
-  /* margin-top: 25px;
-  margin-right: 40px; */
+  /* margin-top: 25px;*/
+  margin-right: 40px;
 }
 /* левый навбар */
 .left_navbar {
@@ -140,4 +140,13 @@ block_2 {
 }
 .info {
   color: #727272;
+}
+
+@media (max-width: 768px) {
+  .logo_img {
+    margin-left: 0;
+  }
+  .exit {
+    margin-right: 0;
+  }
 }
