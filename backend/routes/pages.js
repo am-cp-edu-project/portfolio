@@ -4,7 +4,7 @@ const path = require('path')
 const frontendPath = path.join(__dirname, '../../frontend', '/build')
 
 const auth = (req, res, next) => {
-  if (req.isAuthenticated()) {
+  if (req.isAuthenticated() && req.user.Role === 'User') {
     next()
   }
   else {
@@ -12,14 +12,28 @@ const auth = (req, res, next) => {
   }
 }
 
+const adminAuth = (req, res, next) => {
+  if (req.isAuthenticated() && req.user.Role === 'Admin') {
+    next()
+  }
+  else {
+    return res.redirect('/404')
+  }
+}
+
 router.get('/', (req, res) => res.redirect('/home'))
 
 router.get('/login', (req, res) => {
   if (req.isAuthenticated()) {
-    return res.redirect('/home')
+    if (req.user.Role === 'Admin') {
+      return res.redirect('/admin')
+    }
+    else {
+      return res.redirect('/home')
+    }
   }
   else {
-    res.sendFile(path.join(frontendPath, 'login.html'))
+    res.sendFile(path.join(frontendPath, '/login.html'))
   }
 })
 
@@ -40,8 +54,28 @@ router.get('/logout', (req, res) => {
   res.redirect('/')
 })
 
+router.get('/admin', adminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/admin.html'))
+})
+
+router.get('/processed', adminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/processed.html'))
+})
+
+router.get('/rating', adminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/rating.html'))
+})
+
+router.get('/info', adminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/info.html'))
+})
+
+router.get('/user/*', (req, res) => {
+  res.sendFile(path.join(frontendPath, '/profile_admin.html'))
+})
+
 router.get('*', function (req, res) {
-  res.sendFile(path.join(frontendPath + '/404.html'))
+  res.sendFile(path.join(frontendPath, '/404.html'))
 })
 
 module.exports = router

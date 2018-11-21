@@ -1,6 +1,10 @@
 const UserModel = require('../models/user.js')
 const AchieveModel = require('../models/achieve')
 
+exports.allUsers = function () {
+  return UserModel.find({ Role: 'User' })
+}
+
 exports.findUserById = function (id) {
   return UserModel.findById(id)
 }
@@ -10,7 +14,6 @@ exports.findUserByName = function (username) {
 }
 
 exports.createAchieve = function (achieve) {
-  console.log(achieve)
   return AchieveModel.create(achieve)
 }
 
@@ -24,4 +27,18 @@ exports.addUser = function (userData) {
 
 exports.findAchieveById = function (id) {
   return AchieveModel.findById(id)
+}
+
+exports.ChangeAchieve = function (id, isGood) {
+  if (isGood === true) {
+    console.log('Бабушка помоги')
+    return AchieveModel.findOneAndUpdate({ _id: id }, { $set: { status: 'Принято' } }, function (err, result) {
+      console.log('')
+    })
+  }
+  else {
+    return AchieveModel.findOneAndUpdate({ _id: id }, { $set: { status: 'Отказано' } }, function (err, result) {
+      console.log('')
+    })
+  }
 }

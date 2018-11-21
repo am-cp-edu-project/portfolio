@@ -56,3 +56,23 @@ html {
 	color: white;
 	margin-top: 10px;
 }
+@media (max-width: 768px) {
+    .logo_img{
+        min-width: 15%;
+        max-width: 50%;
+        height: auto;
+        margin-left: 0;
+    }
+    .p_header {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+        }
+    .login{
+        padding: 30px 25px;
+        margin-top: 20px;
+    }
+    .button{
+        width: 100%;
+    }
+}
+    

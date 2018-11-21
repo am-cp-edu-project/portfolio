@@ -25,7 +25,9 @@ const achieveSchema = mongoose.Schema({
   ud: String,
   winner: String,
   comment: String,
-  files: [String]
+  ball: Number,
+  files: [String],
+  status: String
 })
 
 const Achieve = connection.model('Achieve', achieveSchema)

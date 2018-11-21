@@ -44,7 +44,7 @@ module.exports.addAchieve = function (req, res) {
         month: 'numeric',
         day: 'numeric'
       }
-
+      achieve.status = 'Ожидает проверки'
       achieve.date = new Date().toLocaleString('ru', options)
 
       let arr = []
@@ -78,21 +78,11 @@ module.exports.addUser = async function (req, res) {
 
 module.exports.dynamic = async function (req, res) {
   let Achs = []
-  for (let i of req.user.Achievement) {
+  let W = await req.user.Achievement
+  for (let i of W) {
     let Ach = await db.findAchieveById(i)
-    let files = Ach.files
-    let date = Ach.date
-    let crit = Ach.type
-    let popisal = Ach.comment
-    let status = 'Ожидает проверки'
-    let Achieve = {
-      Files: files,
-      Date: date,
-      Crit: crit,
-      Popisal: popisal,
-      Status: status
-    }
-    Achs.push(Achieve)
+
+    await Achs.push(Ach)
   }
   res.status(200).send({ LastName: req.user.LastName, FirstName: req.user.FirstName, Patronymic: req.user.Patronymic, Faculty: req.user.Faculty, Course: req.user.Course, AverageMark: req.user.AverageMark, Achs: Achs })
 }
