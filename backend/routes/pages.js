@@ -13,6 +13,7 @@ const auth = (req, res, next) => {
 }
 
 const adminAuth = (req, res, next) => {
+  console.log(req)
   if (req.isAuthenticated() && req.user.Role === 'Admin') {
     next()
   }
