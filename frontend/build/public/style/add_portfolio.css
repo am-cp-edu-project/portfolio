@@ -264,9 +264,6 @@ input[readonly] {
     width: 100%;
   }
   .logo_img {
-    min-width: 15%;
-    max-width: 50%;
-    height: auto;
     margin-left: 0;
   }
   .p_header {
