@@ -16,6 +16,8 @@ router.get('/checked', adminController.Checked)
 
 router.get('/zxcvbn', adminController.dynamic)
 
+router.get('/getRating', adminController.getRating)
+
 router.get('/user=*', adminController.allUsers)
 
 module.exports = router

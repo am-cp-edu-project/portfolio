@@ -25,6 +25,7 @@ const achieveSchema = mongoose.Schema({
   ud: String,
   winner: String,
   comment: String,
+  ball: Number,
   files: [String],
   status: String
 })

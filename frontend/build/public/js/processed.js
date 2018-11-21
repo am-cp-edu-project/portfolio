@@ -12,8 +12,7 @@ function getUsers () {
         qq += '<div class="name"><h3>' + data.Info[i].user + '</h3><block><p><a href="/user/' + data.Info[i].Id + '" class="goto">Перейти к профилю</a></p>'
         qq += '<br><p>Критерий: <criteria>' + data.Info[i].Achievements[j] + '</criteria></p>'
         qq += '<div>Описание: <desc>' + data.Info[i].Comments[j] + '</desc></div>'
-        qq += '<p>Статус: <status class="info">' + data.Info[i].Status[j] + '</status></p>'
-        qq += '<button type="button" class="btn btn-danger">Изменить</button></block></div>'
+        qq += '<p>Статус: <status class="info">' + data.Info[i].Status[j] + '</status></p></block></div>'
       }
     }
     document.getElementById('users').innerHTML = qq

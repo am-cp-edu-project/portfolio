@@ -11,6 +11,7 @@ const userSchema = mongoose.Schema({
   AverageMark: Number,
   Faculty: String,
   Course: Number,
+  Ball: Number,
   Achievement: [String]
 })
 

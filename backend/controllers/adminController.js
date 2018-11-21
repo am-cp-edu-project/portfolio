@@ -4,7 +4,7 @@ module.exports.dynamic = async function (req, res) {
   let info = []
   let Users = await db.allUsers()
   for (let user of Users) {
-    let str = user.FirstName + ' ' + user.LastName + ' ' + user.Patronymic
+    let str = user.LastName + ' ' + user.FirstName + ' ' + user.Patronymic
     let Achievements = []
     let Comments = []
     let AchId = []
@@ -58,7 +58,7 @@ module.exports.Checked = async function (req, res) {
   let info = []
   let Users = await db.allUsers()
   for (let user of Users) {
-    let str = user.FirstName + ' ' + user.LastName + ' ' + user.Patronymic
+    let str = user.LastName + ' ' + user.FirstName + ' ' + user.Patronymic
     let Achievements = []
     let Comments = []
     let AchId = []
@@ -75,4 +75,16 @@ module.exports.Checked = async function (req, res) {
     info.push({ Id: user._id, user: str, Comments: Comments, Achievements: Achievements, AchId: AchId, Status: Status })
   }
   res.status(200).send({ Info: info })
+}
+
+module.exports.getRating = async function (req, res) {
+  let users = []
+  let Users = await db.allUsers()
+  for (let user of Users) {
+    console.log(user)
+    let str = user.LastName + ' ' + user.FirstName + ' ' + user.Patronymic
+    users.push({ Name: str, Ball: user.Ball })
+  }
+  console.log(users)
+  res.status(200).send({ Users: users })
 }

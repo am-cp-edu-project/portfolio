@@ -118,6 +118,7 @@ function f () {
   }
   res.comment = $('#comment').val()
   res.status = 'Ожидает проверки'
+  res.ball = 0
   var form = document.forms.namedItem('fileinfo')
   console.log(form)
   var oData = new FormData(form)

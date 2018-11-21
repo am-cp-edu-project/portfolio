@@ -14,8 +14,7 @@ function getUsers () {
       for (let j of data.Achs[i].Files) {
         qq += '<p><a  href="' + '/uploads/' + j + '" class="goto">Подтверждающий документ</a></p>'
       }
-      qq += '<p>Критерий: <criteria class="info">' + data.Achs[i].Crit + '</criteria></p><p>Описание: <desc class="info">' + data.Achs[i].Popisal + '</desc></p><p>Статус: <status class="info">' + data.Achs[i].Status + '</status></p>'
-      qq += '<button type="button" class="btn btn-success btn-sm">Изменить статус</button></block></div>'
+      qq += '<p>Критерий: <criteria class="info">' + data.Achs[i].Crit + '</criteria></p><p>Описание: <desc class="info">' + data.Achs[i].Popisal + '</desc></p><p>Статус: <status class="info">' + data.Achs[i].Status + '</status></p></block></div>'
     }
     document.getElementById('info').innerHTML = qq
 
