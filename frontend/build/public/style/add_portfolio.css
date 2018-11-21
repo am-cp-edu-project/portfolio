@@ -22,6 +22,7 @@ ul {
   border-bottom: 1px solid #a5a5a5;
   color: #4a4a4a;
   font-size: 14px;
+  align-items: center;
 }
 .logo_img {
   /* float: left; */
@@ -30,12 +31,6 @@ ul {
   margin-right: 10px;
   min-height: 60px;
   align-self: center;
-}
-
-@media (max-width: 768px) {
-  .logo_img {
-    margin-left: 0;
-  }
 }
 
 .block_header {
@@ -49,7 +44,6 @@ ul {
 }
 .exit {
   text-align: right;
-  margin-top: 25px;
   margin-right: 40px;
 }
 /**/
@@ -269,8 +263,6 @@ input[readonly] {
     margin-bottom: 0.1rem;
   }
   .exit {
-    text-align: left;
-    margin-top: 10px;
     margin-right: 0px;
   }
   .left_navbar {

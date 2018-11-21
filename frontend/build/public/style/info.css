@@ -10,6 +10,7 @@ body {
   border-bottom: 1px solid #a5a5a5;
   color: #4a4a4a;
   font-size: 14px;
+  align-items: center;
 }
 .logo_img {
   /* float: left; */
@@ -37,7 +38,6 @@ body {
 }
 .exit {
   text-align: right;
-  margin-top: 25px;
   margin-right: 40px;
 }
 /**/
@@ -116,7 +116,37 @@ body {
 }
 
 @media (max-width: 768px) {
+  #check1,
+  #check2 {
+    width: 100%;
+  }
+  .selectors {
+    /* margin-top: 20px; */
+    width: 100%;
+  }
+  .area_text {
+    width: 100%;
+  }
+  .button_send {
+    width: 100%;
+  }
+  .logo_img {
+    margin-left: 0;
+  }
+  .p_header {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+  .exit {
+    margin-right: 0px;
+  }
   .left_navbar {
     width: 100%;
+  }
+  .ul_nav {
+    padding-bottom: 1rem;
+  }
+  .page_top {
+    padding-bottom: 0;
   }
 }
