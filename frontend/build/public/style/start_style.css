@@ -11,20 +11,25 @@ html {
         background-color: #E9E9E9;
 }
 .logo_img{
-    float: left;
-  	height: 100%;
-  	margin-left: 50px;
+    /* float: left; */
+    /* height: 100%; */
+    margin-left: 50px;
     margin-right: 10px;
+    min-height: 60px;
+    align-self: center;
 }
 .block_header{
     margin-top: 5px;
     margin-bottom: 5px;
     font-family: sans-serif;
     color: #4a4a4a;
+    display: flex;
     font-size: 14px;
+    /* align-items: center; */
+    /* justify-content: flex-start; */
 }
 .p_header{
-    margin-top: 8px;
+    /* margin-top: 8px; */
 }
 .login_form {
     background-color: white;
@@ -58,18 +63,18 @@ html {
 }
 @media (max-width: 768px) {
     .logo_img{
-        min-width: 15%;
+        /*         min-width: 15%;
         max-width: 50%;
-        height: auto;
+        height: auto; */
         margin-left: 0;
-    }
-    .p_header {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
         }
+    .p_header {
+    /* margin-top: 0.1rem; */
+    /* margin-bottom: 0.1rem; */
+    }
     .login{
         padding: 30px 25px;
-        margin-top: 20px;
+        /* margin-top: 60px; */
     }
     .button{
         width: 100%;
