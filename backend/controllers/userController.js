@@ -18,8 +18,7 @@ module.exports.login = function (req, res, next) {
       if (err) {
         return next(err)
       }
-      console.log(user)
-      if (user.username === 'admin') {
+      if (user.Role === 'Admin') {
         return res.redirect('/admin')
       }
       else {
