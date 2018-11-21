@@ -95,3 +95,9 @@ block{
 .info{
     color: #727272;
 }
+
+@media (max-width: 768px) {
+  .left_navbar {
+    width: 100%;
+  }
+}

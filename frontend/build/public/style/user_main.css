@@ -149,4 +149,7 @@ block_2 {
   .exit {
     margin-right: 0;
   }
+  .left_navbar {
+    width: 100%;
+  }
 }

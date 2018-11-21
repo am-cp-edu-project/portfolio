@@ -107,3 +107,9 @@ ul {
   color: black;
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  .left_navbar {
+    width: 100%;
+  }
+}
