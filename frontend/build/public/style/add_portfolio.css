@@ -131,6 +131,7 @@ ul {
 .btn-file {
   position: relative;
   overflow: hidden;
+  margin-right: 5px;
 }
 .btn-file input[type='file'] {
   position: absolute;
