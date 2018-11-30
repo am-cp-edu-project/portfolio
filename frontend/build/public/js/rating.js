@@ -6,7 +6,7 @@ function getUsers () {
     let data = JSON.parse(xhr.responseText)
     let qq = ''
     for (let user of data.Users) {
-      qq += '<tr><td class="name">' + user.Name + '</td><td class="ball">' + user.Ball + '</td></tr>'
+      qq += '<tr><td class="name"><a href="/user/' + user.Id + '" class="goto">' + user.Name + '</a></td><td class="ball">' + user.Ball + '</td></tr>'
     }
     document.getElementById('users').innerHTML = qq
   }

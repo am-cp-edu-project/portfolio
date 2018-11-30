@@ -1,18 +1,8 @@
-function Success (button) {
-  let id = button.value
-  $.post('/AchSuccess', { Id: id })
-}
-
-function Failed (button) {
-  let id = button.value
-
-  $.post('/AchFailed', { Id: id })
-}
 
 function getUsers () {
   var xhr = new XMLHttpRequest()
 
-  xhr.open('GET', '/zxcvbn', true)
+  xhr.open('GET', '/checked', true)
 
   xhr.onload = function () {
     let data = JSON.parse(xhr.responseText)
@@ -22,8 +12,8 @@ function getUsers () {
         qq += '<div class="name"><h3>' + data.Info[i].user + '</h3><block><p><a href="/user/' + data.Info[i].Id + '" class="goto">Перейти к профилю</a></p>'
         qq += '<br><p>Критерий: <criteria>' + data.Info[i].Achievements[j] + '</criteria></p>'
         qq += '<div>Описание: <desc>' + data.Info[i].Comments[j] + '</desc></div>'
-        qq += ' <br><div class="input-container"><textarea class="form-control" rows="3" placeholder="Введите комментарий..."></textarea></div><br><button type="button" onclick="Success(this)" value="' + data.Info[i].AchId[j] + '" class="btn btn-outline-success btn-md">Принять</button><button type="button" onclick="Failed(this)" value="' + data.Info[i].AchId[j] + '" class="btn btn-outline-danger btn-md">Отклонить</button><br>'
-        qq += '</block></div>'
+        qq += '<p>Статус: <status class="info">' + data.Info[i].Status[j] + '</status></p>'
+        qq += '<br><button type="button" onclick="Success(this)" value="' + data.Info[i].AchId[j] + '" class="btn btn-outline-success btn-md">Изменить</button><button type="button" onclick="Failed(this)" value="' + data.Info[i].AchId[j] + '" class="btn btn-outline-info btn-md">Удалить</button><br></br></block></div>'
       }
     }
     document.getElementById('users').innerHTML = qq

@@ -13,8 +13,16 @@ const auth = (req, res, next) => {
 }
 
 const adminAuth = (req, res, next) => {
-  console.log(req)
   if (req.isAuthenticated() && req.user.Role === 'Admin') {
+    next()
+  }
+  else {
+    return res.redirect('/404')
+  }
+}
+
+const superAdminAuth = (req, res, next) => {
+  if (req.isAuthenticated() && req.user.Role === 'SuperAdmin') {
     next()
   }
   else {
@@ -26,11 +34,16 @@ router.get('/', (req, res) => res.redirect('/home'))
 
 router.get('/login', (req, res) => {
   if (req.isAuthenticated()) {
-    if (req.user.Role === 'Admin') {
-      return res.redirect('/admin')
+    if (req.user.Role === 'SuperAdmin') {
+      return res.redirect('/superadmin')
     }
     else {
-      return res.redirect('/home')
+      if (req.user.Role === 'Admin') {
+        return res.redirect('/admin')
+      }
+      else {
+        return res.redirect('/home')
+      }
     }
   }
   else {
@@ -59,16 +72,32 @@ router.get('/admin', adminAuth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/admin.html'))
 })
 
+router.get('/superadmin', superAdminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/superadmin.html'))
+})
+
 router.get('/processed', adminAuth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/processed.html'))
+})
+
+router.get('/superprocessed', superAdminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/superprocessed.html'))
 })
 
 router.get('/rating', adminAuth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/rating.html'))
 })
 
+router.get('/superrating', superAdminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/superrating.html'))
+})
+
 router.get('/info', adminAuth, (req, res) => {
   res.sendFile(path.join(frontendPath, '/info.html'))
+})
+
+router.get('/superinfo', superAdminAuth, (req, res) => {
+  res.sendFile(path.join(frontendPath, '/superinfo.html'))
 })
 
 router.get('/user/*', (req, res) => {

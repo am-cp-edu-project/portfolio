@@ -7,28 +7,28 @@ const fs = require('fs')
 const uploadsPath = path.join(__dirname, '../../frontend/build/public/uploads')
 
 module.exports.login = function (req, res, next) {
-  console.log(55555)
   passport.authenticate('local', function (err, user) {
-    console.log(user)
-    console.log(1111)
     if (err) {
       return next(err)
     }
     if (!user) {
       return res.redirect('/')
     }
-    console.log(2222)
     req.logIn(user, function (err) {
       if (err) {
         return next(err)
       }
-      console.log(user)
-      console.log(3333)
+
       if (user.Role === 'Admin') {
         return res.redirect('/admin')
       }
       else {
-        return res.redirect('/home')
+        if (user.Role === 'SuperAdmin') {
+          return res.redirect('/superAdmin')
+        }
+        else {
+          return res.redirect('/home')
+        }
       }
     })
   })(req, res, next)

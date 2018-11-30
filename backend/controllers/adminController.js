@@ -83,7 +83,7 @@ module.exports.getRating = async function (req, res) {
   for (let user of Users) {
     console.log(user)
     let str = user.LastName + ' ' + user.FirstName + ' ' + user.Patronymic
-    users.push({ Name: str, Ball: user.Ball })
+    users.push({ Name: str, Id: user._id, Ball: user.Ball })
   }
   console.log(users)
   res.status(200).send({ Users: users })
