@@ -6,6 +6,7 @@ passport.use(
   new LocalStrategy(async function (username, password, done) {
     try {
       const user = await db.findUserByName(username)
+      console.log(user)
       if (!user || user.Password !== password) {
         return done(null, false, {
           errors: { 'email or password': 'is invalid' }

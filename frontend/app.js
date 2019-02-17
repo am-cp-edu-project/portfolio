@@ -10,6 +10,7 @@ app.listen(port, () => {
 })
 
 app.get('/login', (req, res) => {
+    console.log()
     res.sendFile(__dirname + '/build/login.html')
 })
 app.get('/crit', (req, res) => {

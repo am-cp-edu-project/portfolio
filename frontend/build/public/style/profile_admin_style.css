@@ -51,7 +51,7 @@ main{
 }
 .element a{
     background-color: white;
-    color: black;
+    color: rgb(115,115,115);
     padding: 10px;
     display: block;
     width: 100%;
